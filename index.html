@@ -53,6 +53,40 @@
 </section>
 
 <section class="slide">
+	<h2>Workflow</h2>
+	<p>
+		<span class="next">Дизайн спецификации, которые мы получаем от дизайн-команды  →</span>
+		<span class="next">Разработка статического прототипа согласно спецификации (FrontEnd-команда) →</span>
+		<span class="next">Окончательная верстка + добавление функциональности (RIA-команда) →</span>
+		<span class="next">Тестирование (QA) → </span>
+		<span class="next">Production...</span>
+	</p>
+</section>
+
+<section class="slide">
+	<h2>DX-Trade</h2>
+	<p>
+		Технологии, использованные при создании прототипа:
+	</p>
+	<ol>
+		<li>React JS</li>
+		<li>BEM</li>
+		<li>Vanilla JS</li>
+	</ol>
+</section>
+
+<section class="slide" id="dx-trade">
+	<figure>
+		<img class="cover" src="pictures/dx-trade.png" alt="Dx-Trade">
+	</figure>
+	<style>
+		#dx-trade img.cover {
+			width: 900px;
+		}
+	</style>
+</section>
+
+<section class="slide">
 	<h2>Gedik</h2>
 	<p>
 		Технологии, использованные при создании прототипа:
@@ -244,7 +278,7 @@
 </section>
 
 <section class="slide" id="css-history">
-	<h2><span class="highlite">От Css к CSS Модулям</span></h2>
+	<h2><span class="highlite">От Css к CSS-модулям</span></h2>
 	<figure>
 		<img class="cover" src="pictures/Legos.jpg" alt="Legos">
 	</figure>
@@ -329,6 +363,58 @@
 			Излишне семантическая разметка.
 		</li>
 	</ol>
+</section>
+
+<section class="slide">
+	<h2>БЭМ — не все так гладко</h2>
+	<p class="singleImage">
+		<img src="pictures/dx-bem.png" alt="DX-BEM">
+	</p>
+	<style>
+
+		.singleImage img {
+			width: 700px;
+		}
+	</style>
+</section>
+
+<section class="slide">
+	<h2>CSS-модули</h2>
+	<ol>
+		<li>
+			Динамическое создание имен классов для каждого локально заданного стиля.
+		</li>
+		<li>
+			CSS-модули являются способом автоматизации BEM-нотации за счёт
+			генерирования уникального className, которое не станет конфликтовать ни с одним другим, даже если будет
+			использоваться одно и то же имя.
+		</li>
+	</ol>
+</section>
+
+<section class="slide" id="css-modules">
+	<h2><span class="highlite">CSS-модули</span></h2>
+	<figure>
+		<img class="cover" src="pictures/brick-wall.jpg" alt="Bricks">
+	</figure>
+	<style>
+		#css-modules h2 {
+			margin: 50px 0 0;
+			color: #FFF;
+			text-align: center;
+			font-size: 70px;
+		}
+
+		#css-modules .highlite {
+			background-color: orange;
+			padding: .2rem .5rem;
+			color: black;
+		}
+
+		#css-modules img.cover {
+			max-height: 120%;
+		}
+	</style>
 </section>
 
 <section class="slide">
