@@ -707,7 +707,8 @@
 
 <section class="slide" id="how3">
 	<p>
-		В приведенных выше примерах мы темизируем каждый компонент по отдельности. Но можно определить тему для всего
+		В приведенных выше примерах мы темизируем каждый компонент<br/>по отдельности. Но можно определить тему для
+		всего
 		приложения и передать компонентам соответствующие им темы
 	</p>
 	<img class="jsImage" src="pictures/themr_provider.png"/>
@@ -868,6 +869,7 @@
 			display: block;
 			width: 550px;
 		}
+
 		#custom_hoc1 {
 			padding-top: 50px;
 		}
@@ -888,94 +890,128 @@
 			display: block;
 			width: 500px;
 		}
-
 	</style>
 </section>
 
 <section class="slide">
-	<h2>Even tables</h2>
-	<table>
-		<tr>
-			<th scope="col">Locavore</th>
-			<th>Umami</th>
-			<th>Helvetica</th>
-			<th>Vegan</th>
-		</tr>
-		<tr>
-			<th scope="row">Fingerstache</th>
-			<td>Kale</td>
-			<td>Chips</td>
-			<td>Keytar</td>
-		</tr>
-		<tr>
-			<th scope="row">Sriracha</th>
-			<td>Gluten-free</td>
-			<td>Ennui</td>
-			<td>Keffiyeh</td>
-		</tr>
-		<tr>
-			<th scope="row">Thundercats</th>
-			<td>Jean</td>
-			<td>Shorts</td>
-			<td>Biodiesel</td>
-		</tr>
-		<tr>
-			<th scope="row">Terry</th>
-			<td>Richardson</td>
-			<td>Swag</td>
-			<td>Blog</td>
-		</tr>
-	</table>
-	<p>It’s good to have information organized.</p>
+	<h2>Dependency Injection. Контекст в React</h2>
+	<p>
+		Разница между контекстом и свойствами в том, что контекст доступен всем потомкам, а свойства — только тому
+		компоненту, которому они переданы.
+	</p>
 </section>
 
-<section class="slide" id="picture">
-	<h2>Pictures</h2>
-	<figure>
-		<img class="cover" src="pictures/picture.jpg" alt="Orange typewriter on a wooden table close-up">
-		<figcaption class="white">
-			<a href="http://fiftyfootshadows.net/">© John Carey</a>
-		</figcaption>
-	</figure>
+<section class="slide" id="custom_di_context">
+	<p>Рассмотрим компонент Parent:
+		<img class="preview" src="pictures/di_context.png" alt="custom di"></p>
 	<style>
-		#picture h2 {
-			color: #FFF;
+		#custom_di_context .preview {
+			display: block;
+			width: 500px;
+		}
+
+		#custom_di_context {
+			padding-top: 10px;
 		}
 	</style>
 </section>
 
-<section class="slide">
-	<h2 class="shout shrink">You can even shout this way</h2>
-</section>
-
-<section class="slide">
-	<h2>Inner navigation</h2>
+<section class="slide" id="custom_di_context1">
+	<p>В компоненте Parent мы реализовали следующие вещи:</p>
 	<ol>
-		<li>Lets you reveal list items one by one</li>
-		<li class="next">To keep some key points</li>
-		<li class="next">In secret from audience</li>
-		<li class="next">But it will work only once</li>
-		<li class="next">Nobody wants to see the same joke twice</li>
+		<li>
+			Статическое свойство childContextTypes, которое описывает свойства, которые будут доступны всем потомкам.
+		</li>
+		<li>
+			Метод getChildContext(), возвращающий конкретное значение контекста.
+		</li>
+		<li>
+			Компонент GrandChild реализует статическое свойство contextTypes, описывающее, какие свойства контекста
+			будет использовать компонент (доступны через this.context).
+		</li>
 	</ol>
-</section>
-
-<section class="slide grid">
-	<h2>All nicely aligned to grid</h2>
-</section>
-
-<section class="slide" id="see-more">
-	<h2 class="shout">
-		<img src="pictures/logo.svg" alt="Shower logo">
-		<a href="https://github.com/shower/shower">See more on GitHub</a>
-	</h2>
+	<p><em>Компоненту Child не нужно передавать контекст вниз в компонент GrandChild. В этом отличие от свойств, которые
+		нужно передавать по цепочке вручную.</em></p>
 	<style>
-		#see-more h2 {
-			font-size: 100px
+
+		#custom_di_context1 {
+			padding-top: 10px;
+		}
+	</style>
+</section>
+
+<section class="slide">
+	<h2>Dependency Injection (DI)</h2>
+	<p>
+		Смысл DI в том, чтобы иметь зависимости от абстрактных идей, вместо конкретных реализаций. Это позволяет
+		тестировать код и увеличивает возможность повторного использования.
+	</p>
+</section>
+
+<section class="slide" id="custom_di">
+	<p>Рассмотрим компонент RandomNumber отображающий случайное число от 1 до max:
+		<img class="preview" src="pictures/di_di1.png" alt="custom di"></p>
+	<style>
+		#custom_di .preview {
+			display: block;
+			width: 600px;
+		}
+	</style>
+</section>
+
+<section class="slide" id="custom_di1">
+	<p>Давайте посмотрим, как будет выглядеть этот компонент, если мы используем контекст:
+		<img class="preview" src="pictures/di_di2.png" alt="custom di"></p>
+	<p>Теперь мы не зависим от Math.random и Math.round и можем заменить их своими собственными реализациями и передать
+		их через контекст.</p>
+	<style>
+		#custom_di1 .preview {
+			display: block;
+			width: 600px;
 		}
 
-		#see-more img {
-			width: 0.72em;
-			height: 0.72em;
+		#custom_di1 {
+			padding-top: 10px;
+		}
+	</style>
+</section>
+
+<section class="slide" id="custom_di2">
+	<p>Мы можем расширить наш пример с генератором случайных чисел до любого сервиса:
+		<img class="preview" src="pictures/di_di3.png" alt="custom di"></p>
+	<style>
+		#custom_di2 .preview {
+			display: block;
+			width: 600px;
+		}
+
+		#custom_di2 {
+			padding-top: 10px;
+		}
+	</style>
+</section>
+
+<section class="slide">
+	<p>С помощью генераторов ES7 мы можем создать отличную абстракцию для DI в React.
+		Давайте рассмотрим два генератора:</p>
+	<ol>
+		<li>@inject — содержит contextTypes компонента.</li>
+		<li>@provide — описывает childContextTypes компонента и связывает контекст с данными.</li>
+	</ol>
+	<p>Здесь мы воспользуемся рассмотренным выше паттерном HOC. Функции (декораторе), которая принимает компонент в
+		качестве параметра и возвращает компонент.</p>
+</section>
+
+<section class="slide" id="custom_di3">
+	<img class="preview" src="pictures/di_di4.png" alt="custom di">
+	<style>
+		#custom_di3 .preview {
+			display: block;
+			width: 700px;
+		}
+
+		#custom_di3 {
+			padding-top: 20px;
 		}
 	</style>
 </section>
