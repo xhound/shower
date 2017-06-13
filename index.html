@@ -15,7 +15,7 @@
 </header>
 
 <section class="slide" id="cover">
-	<h2><span class="highlite">Разработка UI-Kit</span></h2>
+	<h2><span class="highlite">UI-кит. Как загарпунить белого кита и не утонуть в коде</span></h2>
 	<p><span class="highlite">Ярослав Иванов</span><br/><span class="highlite">Devexperts FrontEnd-Team</span></p>
 	<figure>
 		<img class="cover" src="pictures/SubmarineControls.jpg" alt="Control Panel">
@@ -23,6 +23,7 @@
 	<style>
 		#cover h2 {
 			margin: 150px 0 0;
+			line-height: normal;
 			color: #FFF;
 			text-align: center;
 			font-size: 70px;
@@ -278,7 +279,7 @@
 </section>
 
 <section class="slide" id="css-history">
-	<h2><span class="highlite">От Css к CSS-модулям</span></h2>
+	<h2><span class="highlite">От CSS к CSS-модулям</span></h2>
 	<figure>
 		<img class="cover" src="pictures/Legos.jpg" alt="Legos">
 	</figure>
@@ -417,17 +418,478 @@
 	</style>
 </section>
 
+<section class="slide" id="single">
+	<h2>Одиночный класс</h2>
+	<img class="preview" src="pictures/w1-example.png" alt="css-w1">
+	<div class="doubleImages">
+		<p>widget.css
+			<img class="singleImage" src="pictures/w1-css.png" alt="css-w1">
+		</p>
+		<p>widget.js
+			<img class="singleImage" src="pictures/w1-js.png" alt="js-w1">
+		</p>
+	</div>
+	<style>
+		.doubleImages {
+			display: flex;
+			justify-content: flex-start;
+			align-items: flex-start;
+		}
+
+		.preview {
+			width: 200px;
+		}
+
+		.singleImage {
+			width: 400px;
+		}
+
+		#single {
+			padding-top: 50px;
+		}
+
+		#single h2 {
+			margin-bottom: 10px;
+		}
+	</style>
+</section>
+
+<section class="slide" id="many">
+	<h2>Несколько классов</h2>
+	<img class="preview" src="pictures/w2-example.png" alt="css-w1">
+	<div class="doubleImages">
+		<p>widget1.css
+			<img class="singleImage" src="pictures/w2-css.png" alt="css-w1">
+		</p>
+		<p>widget1.js
+			<img class="singleImage" src="pictures/w2-js.png" alt="js-w1">
+		</p>
+	</div>
+	<style>
+		.doubleImages {
+			display: flex;
+			justify-content: flex-start;
+			align-items: flex-start;
+		}
+
+		.preview {
+			width: 200px;
+		}
+
+		.singleImage {
+			width: 400px;
+		}
+
+		#many {
+			padding-top: 50px;
+		}
+
+		#many h2 {
+			margin-bottom: 10px;
+		}
+	</style>
+</section>
+
+<section class="slide" id="combined">
+	<h2>Комбинация классов</h2>
+	<img class="preview" src="pictures/w3-example.png" alt="css-w1">
+	<div class="doubleImages">
+		<p>widget2.css
+			<img class="singleImage" src="pictures/w3-css.png" alt="css-w1">
+		</p>
+		<p>widget2.js
+			<img class="singleImage" src="pictures/w3-js.png" alt="js-w1">
+		</p>
+	</div>
+	<style>
+		.doubleImages {
+			display: flex;
+			justify-content: flex-start;
+			align-items: flex-start;
+		}
+
+		.preview {
+			width: 200px;
+		}
+
+		.singleImage {
+			width: 400px;
+		}
+
+		#combined {
+			padding-top: 50px;
+		}
+
+		#combined h2 {
+			margin-bottom: 10px;
+		}
+	</style>
+</section>
+
+<section class="slide" id="nested">
+	<h2>Вложенность классов</h2>
+	<img class="preview" src="pictures/w4-example.png" alt="css-w1">
+	<div class="doubleImages">
+		<p>widget3.css
+			<img class="singleImage" src="pictures/w4-css.png" alt="css-w1">
+		</p>
+		<p>widget3.js
+			<img class="singleImage" src="pictures/w4-js.png" alt="js-w1">
+		</p>
+	</div>
+	<style>
+		.doubleImages {
+			display: flex;
+			justify-content: flex-start;
+			align-items: flex-start;
+		}
+
+		.preview {
+			width: 200px;
+		}
+
+		.singleImage {
+			width: 400px;
+		}
+
+		#nested {
+			padding-top: 50px;
+		}
+
+		#nested h2 {
+			margin-bottom: 10px;
+		}
+	</style>
+</section>
+
+<section class="slide" id="composition">
+	<h2>Композиция</h2>
+	<img class="preview" src="pictures/w5-example.png" alt="css-w1">
+	<div class="doubleImages">
+		<div>
+			<p>util.css
+				<img class="singleImage" src="pictures/w5-util.png" alt="css-w1">
+			</p>
+			<p>widget4.css
+				<img class="singleImage" src="pictures/w5-css.png" alt="css-w1">
+			</p>
+		</div>
+		<p>widget4.js
+			<img class="jsImage" src="pictures/w5-js.png" alt="js-w1">
+		</p>
+	</div>
+	<style>
+		.doubleImages {
+			display: flex;
+			justify-content: flex-start;
+			align-items: flex-start;
+		}
+
+		.preview {
+			width: 200px;
+		}
+
+		#composition .singleImage {
+			width: 300px;
+		}
+
+		#composition .jsImage {
+			width: 500px;
+		}
+
+		#composition {
+			padding-top: 50px;
+		}
+
+		#composition h2 {
+			margin-bottom: 10px;
+		}
+	</style>
+</section>
+
+<section class="slide" id="themr">
+	<h2><span class="highlite">Темизация UI компонетов. react-css-themr</span></h2>
+	<figure>
+		<img class="cover" src="pictures/paint.jpg" alt="Paint">
+	</figure>
+	<style>
+		#themr h2 {
+			margin: 150px 0 0;
+			color: #FFF;
+			line-height: normal;
+			text-align: center;
+			font-size: 70px;
+		}
+
+		#themr .highlite {
+			background-color: orange;
+			padding: .2rem .5rem;
+			color: black;
+		}
+
+		#themr img.cover {
+			height: 100%;
+		}
+	</style>
+</section>
+
 <section class="slide">
-	<h2>Code samples</h2>
-	<pre>
-		<code>&lt;!DOCTYPE html&gt;</code>
-		<code class="mark">&lt;html lang="en"&gt;</code>
-		<code><mark>&lt;head&gt;</mark> <span class="comment">&lt;!--Comment--&gt;</span></code>
-		<code>    &lt;title&gt;Shower&lt;/title&gt;</code>
-		<code>    &lt;meta charset="<mark class="important">UTF-8</mark>"&gt;</code>
-		<code>    &lt;link rel="stylesheet" href="screen.css"&gt;</code>
-		<code><mark>&lt;/head&gt;</mark></code>
-	</pre>
+	<p>А что если переиспользуемый компонент будет идти без стилей, а нужные для компонента стили мы будем подключать
+		как зависимость?
+	</p>
+	<p>
+		Подход библиотеки react-css-themr состоит из провайдера и декоратора. Провайдер задает тему через контекст, а
+		декоратор добавляет нашему компоненту логику чтобы понять какая тема будет использоваться в нем или как она
+		будет скомпонована в зависимости от конфигурации контекста и свойств.
+	</p>
+</section>
+
+
+<section class="slide" id="how">
+	<h2>Как этим пользоваться?</h2>
+	<p>Допустим мы создали компонент который хотим темизировать. Для этого мы должны передать декоратору themr
+		уникальный идентификатор:
+	</p>
+	<p>Button.js</p>
+	<img class="jsImage" src="pictures/themr_button.png"/>
+	<style>
+		#how .jsImage {
+			width: 500px;
+		}
+
+		#how {
+			padding-top: 50px;
+		}
+
+		#how h2 {
+			margin-bottom: 10px;
+		}
+	</style>
+</section>
+
+<section class="slide" id="how1">
+	<p>Компонент определяет API для темизации который состоит из трех имен классов button, icon и content. И теперь мы
+		можем использовать компонент button например с темой success в которой мы определили стили для button, icon и
+		content в файле successButton.css:
+	</p>
+	<p>SuccessButton.js</p>
+	<img class="jsImage" src="pictures/themr_success.png"/>
+	<style>
+		#how1 .jsImage {
+			width: 500px;
+		}
+
+		#how1 h2 {
+			margin-bottom: 10px;
+		}
+	</style>
+</section>
+
+<section class="slide" id="how2">
+	<p>Также можно определить базовый компонент с дефолтной темой:
+	</p>
+	<p>Button.js</p>
+	<img class="jsImage" src="pictures/themr_success_default.png"/>
+	<style>
+		#how2 .jsImage {
+			width: 500px;
+		}
+
+		#how2 {
+			padding-top: 50px;
+		}
+
+		#how2 h2 {
+			margin-bottom: 10px;
+		}
+	</style>
+</section>
+
+<section class="slide" id="how3">
+	<p>
+		В приведенных выше примерах мы темизируем каждый компонент по отдельности. Но можно определить тему для всего
+		приложения и передать компонентам соответствующие им темы
+	</p>
+	<img class="jsImage" src="pictures/themr_provider.png"/>
+	<style>
+		#how3 .jsImage {
+			width: 600px;
+		}
+
+		#how3 {
+			padding-top: 50px;
+		}
+
+		#how3 h2 {
+			margin-bottom: 10px;
+		}
+	</style>
+</section>
+
+<section class="slide" id="custom">
+	<h2><span class="highlite">Кастомизируемые<br/>UI-компоненты</span></h2>
+	<figure>
+		<img class="cover" src="pictures/drag.jpg" alt="Paint">
+	</figure>
+	<style>
+		#custom h2 {
+			margin: 50px 0 0;
+			color: #FFF;
+			line-height: normal;
+			text-align: center;
+			font-size: 70px;
+		}
+
+		#custom .highlite {
+			background-color: orange;
+			padding: .2rem .5rem;
+			color: black;
+		}
+
+		#custom img.cover {
+			height: 100%;
+		}
+	</style>
+</section>
+
+<section class="slide" id="custom_proxy">
+	<h2>Proxy-компонент</h2>
+	<p><img class="preview" src="pictures/custom_proxy1.png" alt="custom proxy component"></p>
+	<p>Пишем компонент более высокого уровня:
+		<img class="preview" src="pictures/custom_proxy2.png" alt="custom proxy component"></p>
+	<p>Далее мы используем Button:
+		<img class="preview" src="pictures/custom_proxy3.png" alt="custom proxy component"></p>
+	<p>Или даже так:
+		<img class="preview" src="pictures/custom_proxy4.png" alt="custom proxy component"></p>
+	<style>
+		#custom_proxy .preview {
+			display: block;
+			width: 600px;
+		}
+
+		#custom_proxy {
+			padding-top: 50px;
+		}
+
+	</style>
+</section>
+
+<section class="slide" id="custom_style">
+	<h2>Style-компонент</h2>
+	<p>Primary кнопка:
+		<img class="preview" src="pictures/custom_style1.png" alt="custom style component"></p>
+	<p>Чтобы не заниматься копипастой можно определить компоненты так:
+		<img class="preview" src="pictures/custom_style2.png" alt="custom style component"></p>
+	<p>Использование этих компонентов вернет одинаковый результат:
+		<img class="preview" src="pictures/custom_style3.png" alt="custom style component"></p>
+	<style>
+		#custom_style .preview {
+			display: block;
+			width: 450px;
+		}
+
+		#custom_style {
+			padding-top: 50px;
+		}
+
+		#custom_style h2 {
+			margin-bottom: 10px;
+		}
+
+	</style>
+</section>
+
+<section class="slide" id="custom_layout">
+	<h2>Layout-компонент</h2>
+	<p>Родительский компонент, который отодражает два компонента горизонтально:
+		<img class="preview" src="pictures/custom_layout1.png" alt="custom layout component"></p>
+	<p>Мы можем сделать так чтобы он никогда не обновлялся, при этом не прорывая жизненные циклы внутренних компонентов:
+		<img class="preview" src="pictures/custom_layout2.png" alt="custom layout component"></p>
+	<style>
+		#custom_layout .preview {
+			display: block;
+			width: 550px;
+		}
+
+		#custom_layout {
+			padding-top: 50px;
+		}
+
+		#custom_layout h2 {
+			margin-bottom: 10px;
+		}
+
+	</style>
+</section>
+
+<section class="slide" id="custom_container">
+	<h2>Container-компонент</h2>
+	<p>Дано: компонент CommentList
+		<img class="preview" src="pictures/custom_container1.png" alt="custom container component"></p>
+	<p>Разделим получение данных и рендеринг обернув его в контейнер:
+		<img class="preview" src="pictures/custom_container2.png" alt="custom container component"></p>
+	<style>
+		#custom_container .preview {
+			display: block;
+			width: 500px;
+		}
+
+		#custom_container {
+			padding-top: 50px;
+		}
+
+		#custom_container h2 {
+			margin-bottom: 10px;
+		}
+
+	</style>
+</section>
+
+<section class="slide" id="custom_hoc">
+	<h2>Higher Order Component</h2>
+	<p>Начнем с простого компонента Greeting
+		<img class="preview" src="pictures/custom_hoc1.png" alt="custom hoc component"></p>
+	<p>Если он получит props.name, он отрендерит данные. В противном случае он отрендерит “Connecting…”.</p>
+	<style>
+		#custom_hoc .preview {
+			display: block;
+			width: 500px;
+		}
+
+	</style>
+</section>
+
+<section class="slide" id="custom_hoc1">
+	<h2>Higher Order Component</h2>
+	<p>Теперь немного более высокий порядок:
+		<img class="preview" src="pictures/custom_hoc2.png" alt="custom hoc component"></p>
+	<style>
+		#custom_hoc1 .preview {
+			display: block;
+			width: 550px;
+		}
+		#custom_hoc1 {
+			padding-top: 50px;
+		}
+
+
+	</style>
+</section>
+
+<section class="slide" id="custom_hoc2">
+	<h2>Higher Order Component</h2>
+	<p>Далее мы оборачиваем компонент в эту функцию:
+		<img class="preview" src="pictures/custom_hoc3.png" alt="custom hoc component"></p>
+	<p>WOW! Теперь наш компонент Greeting умеет получать данные...</p>
+	<p>Это очень мощный шаблон, чтобы компонент мог получать данные и раздавать их любому количеству простых
+		компонентов.</p>
+	<style>
+		#custom_hoc2 .preview {
+			display: block;
+			width: 500px;
+		}
+
+	</style>
 </section>
 
 <section class="slide">
