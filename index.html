@@ -208,6 +208,36 @@
 	</style>
 </section>
 
+<section class="slide">
+	<h2>Проблема переиспользуемости компонентов как ее решали мы</h2>
+	<p>Были созданы дыв вида UI-китов:</p>
+	<ol>
+		<li>dx-components — общий для проектов Frontend-команды</li>
+		<li>dx-ui — под проект DX-Trade и его вайтлейблов</li>
+		<li>Оба кита версифицированы и подключаются в нужный проект как bower-зависимости</li>
+	</ol>
+</section>
+
+<section class="slide">
+	<h2>Проблема переиспользуемости компонентов как ее решали мы</h2>
+	<p class="doubleImages">
+		<img src="pictures/TLC-events-calendar.png" alt="Electrode">
+		<img src="pictures/TLC-events-list.png" alt="Storybook">
+	</p>
+	<p>Слева и справа используется один и тот-же модифицированный компонент Calendar из пакета dx-components</p>
+	<style>
+		.doubleImages {
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+		}
+
+		.doubleImages img {
+			width: 400px;
+		}
+	</style>
+</section>
+
 <section class="slide" id="ui-kit">
 	<h2><span class="highlite">UI-Kit что это и зачем он нужен</span></h2>
 	<figure>
@@ -1013,6 +1043,54 @@
 		#custom_di3 {
 			padding-top: 20px;
 		}
+	</style>
+</section>
+
+<section class="slide" id="final">
+	<h2><span class="highlite">UI-кит. Как загарпунить белого кита и не утонуть в коде</span></h2>
+	<p><span class="highlite">Ярослав Иванов</span><br/><span class="highlite">Devexperts FrontEnd-Team</span></p>
+	<h2 class="questions"><span class="highlite">Спасибо! Вопросы?</span></h2>
+	<figure>
+		<img class="cover" src="pictures/SubmarineControls.jpg" alt="Control Panel">
+	</figure>
+	<style>
+		#final h2 {
+			margin: 100px 0 0;
+			line-height: normal;
+			color: #FFF;
+			text-align: center;
+			font-size: 70px;
+		}
+
+		#final .questions {
+			margin: 50px 0 0;
+		}
+
+		#final p {
+			margin: 50px 0 0;
+			text-align: center;
+			color: #FFF;
+			font-style: italic;
+			font-size: 20px;
+		}
+
+		#final .highlite {
+			background-color: orange;
+			padding: .2rem .5rem;
+			color: black;
+		}
+
+		#final p a {
+			color: #FFF;
+		}
+
+		#final img.cover {
+			max-height: 110%;
+		}
+
+		#final {
+			padding-top: 10px;
+		 }
 	</style>
 </section>
 
