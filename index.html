@@ -587,6 +587,12 @@
 	</style>
 </section>
 
+<section class="slide">
+	<h2>Container-компонент. Зачем?</h2>
+	<p>Используя этот паттерн мы добавляем новые свойства базовым компонентам. А также можем создавать новые компоненты
+		с более сложным функционалом</p>
+</section>
+
 <section class="slide" id="custom_hoc">
 	<h2>Higher Order Component</h2>
 	<p>Начнем с простого компонента Greeting
@@ -635,6 +641,52 @@
 </section>
 
 <section class="slide">
+	<h2>HOC. Зачем?</h2>
+	<p>Используя этот паттерн мы можем создать фабрику компонентов, гененрируя новые компоненты с рвсширенной
+		функциональностью. А также можем отделить логику компонента от способов ее реализации.</p>
+</section>
+
+<section class="slide" id="tos-1">
+	<h2>Переиспользуемые компоненты</h2>
+	<figure>
+		<img class="preview" src="pictures/TLC-events-list.png" alt="Storybook">
+	</figure>
+	<style>
+		#tos-1 .preview {
+			width: 750px;
+		}
+
+		#tos-1 {
+			padding-top: 10px;
+		}
+	</style>
+</section>
+
+<section class="slide" id="tos-2">
+	<h2>Переиспользуемые компоненты</h2>
+	<figure>
+		<img class="preview" src="pictures/TLC-events-calendar.png" alt="Storybook">
+	</figure>
+	<style>
+		#tos-2 .preview {
+			width: 750px;
+		}
+
+		#tos-2 {
+			padding-top: 10px;
+		}
+	</style>
+</section>
+
+<section class="slide">
+	<h2>Переиспользуемые компоненты</h2>
+	<p>Для решения задачи создания компонента реализующего календарный способ отображения событий и одновременно
+		являющегося виджетом в отображении событий в виде ленты был использован немного модифицированный компонент
+		Calendar из библиотеки dx-components</p>
+	<p>Один компонент — два способа использования. Круто!</p>
+</section>
+
+<section class="slide">
 	<h2>Контекст в React</h2>
 	<p>
 		Разница между контекстом и свойствами в том, что контекст доступен всем потомкам, а свойства — только тому
@@ -680,6 +732,13 @@
 			padding-top: 30px;
 		}
 	</style>
+</section>
+
+<section class="slide">
+	<h2>HOC + Контекст. Зачем?</h2>
+	<p>Используя эти паттерны вместе мы создаем фабрику компонентов, гененрируя новые компоненты с рвсширенной
+		функциональностью, а также мы имеем возможность напрямую передавать необходимые свойства дочерним
+		компонентам.</p>
 </section>
 
 <section class="slide" id="solution">
