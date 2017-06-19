@@ -64,177 +64,133 @@
 	</p>
 </section>
 
-<section class="slide">
-	<h2>DX-Trade</h2>
-	<p>
-		Технологии, использованные при создании прототипа:
-	</p>
-	<ol>
-		<li>React JS</li>
-		<li>BEM</li>
-		<li>Vanilla JS</li>
-	</ol>
-</section>
-
 <section class="slide" id="dx-trade">
+	<h2>DX-Trade</h2>
 	<figure>
-		<img class="cover" src="pictures/dx-trade.png" alt="Dx-Trade">
+		<img class="preview" src="pictures/dx-trade.png" alt="Dx-Trade">
 	</figure>
 	<style>
-		#dx-trade img.cover {
-			width: 900px;
+		#dx-trade img.preview {
+			width: 800px;
+		}
+
+		#dx-trade {
+			padding-top: 30px;
 		}
 	</style>
-</section>
-
-<section class="slide">
-	<h2>Gedik</h2>
-	<p>
-		Технологии, использованные при создании прототипа:
-	</p>
-	<ol>
-		<li>Handelbars</li>
-		<li>BEM</li>
-		<li>Vanilla JS</li>
-	</ol>
 </section>
 
 <section class="slide" id="gedik">
+	<h2>Gedik</h2>
 	<figure>
-		<img class="cover" src="pictures/Gedik.png" alt="Gedik">
+		<img class="preview" src="pictures/Gedik.png" alt="Gedik">
 	</figure>
 	<style>
-		#gedik img.cover {
-			width: 900px;
+		#gedik img.preview {
+			width: 750px;
+		}
+
+		#gedik {
+			padding-top: 30px;
 		}
 	</style>
-</section>
-
-<section class="slide">
-	<h2>Phinom</h2>
-	<p>
-		Технологии, использованные при создании прототипа:
-	</p>
-	<ol>
-		<li>React JS</li>
-		<li>CSS modules</li>
-		<li>Vanilla JS</li>
-	</ol>
 </section>
 
 <section class="slide" id="phinom">
+	<h2>Phinom</h2>
 	<figure>
-		<img class="cover" src="pictures/Phinom.png" alt="Phinom">
+		<img class="preview" src="pictures/Phinom.png" alt="Phinom">
 	</figure>
 	<style>
-		#phinom img.cover {
-			width: 900px;
+		#phinom img.preview {
+			width: 800px;
+		}
+
+		#phinom {
+			padding-top: 30px;
 		}
 	</style>
 </section>
 
-<section class="slide">
-	<h2>TOS Learning Center</h2>
-	<p>
-		Технологии, использованные при создании прототипа:
-	</p>
-	<ol>
-		<li>React JS</li>
-		<li>CSS modules</li>
-		<li>Vanilla JS</li>
-	</ol>
-	<p>
-		В production используются react-компоненты, которые вставляются в верстку шаблонов CMS.
-	</p>
-</section>
-
-<section class="slide" id="tlc">
+<section class="slide" id="want">
+	<h2>При работе с проектом хочется так:</h2>
 	<figure>
-		<img class="cover" src="pictures/TLC.png" alt="TLC">
+		<img class="preview" src="pictures/conveyor.gif" alt="Conveyor">
 	</figure>
 	<style>
-		#tlc img.cover {
-			width: 900px;
+		#want img.preview {
+			width: 800px;
+		}
+
+		#want {
+			padding-top: 30px;
 		}
 	</style>
 </section>
 
-<section class="slide">
-	<h2>Проблема переиспользуемости компонентов как ее решал Walmart</h2>
-	<p class="doubleImages">
-		<img src="pictures/walmart.jpg" alt="Walmart">
-		<img src="pictures/samsClub.jpg" alt="Sams Club">
-	</p>
+<section class="slide" id="dont">
+	<h2>И совсем не хочется так:</h2>
+	<figure>
+		<img class="preview" src="pictures/fail.jpg" alt="Fail">
+	</figure>
 	<style>
-		.doubleImages {
-			display: flex;
-			align-items: center;
-			justify-content: space-between;
+		#dont img.preview {
+			width: 800px;
 		}
 
-		.doubleImages img {
-			width: 400px;
+		#dont {
+			padding-top: 30px;
+		}
+	</style>
+</section>
+
+<section class="slide" id="evolution">
+	<h2>Если работа над проектом длится долго:</h2>
+	<figure>
+		<img class="preview" src="pictures/lifeChanged.jpg" alt="Evolution">
+	</figure>
+	<style>
+		#evolution img.preview {
+			width: 500px;
+		}
+
+		#evolution {
+			padding-top: 30px;
 		}
 	</style>
 </section>
 
 <section class="slide">
-	<h2>Проблема переиспользуемости компонентов как ее решал Walmart</h2>
+	<h2>Проблема!</h2>
 	<ol>
-		<li>Компоненты должны версионироваться, легко устанавливаться и обновляться.</li>
-		<li>Все компоненты находятся во внутреннем npm реестре, что позволяет использовать
-			определенные их версии не боясь, что приложение поломается.
+		<li class="next">
+			Хочется быстро собирать интерфейс используя рабочие, протестированные компоненты.
 		</li>
-		<li>Необходимо соблюдать согласованную структуру в пакетах и стандарты для сотен компонентов.</li>
+		<li class="next">
+			Хочется легко модифицировать внешний вид компонента не сильно влезая, а по возможности вообще не влезая в
+			его верстку.
+		</li>
+		<li class="next">
+			Хочется легко расширять функциональность базовых UI-компонентов.
+		</li>
+		<li class="next">
+			???
+		</li>
+		<li class="next">
+			Хочется чтобы вот сразу вжух и все работало как надо...
+		</li>
 	</ol>
 </section>
 
-<section class="slide">
-	<h2>Electrode и React Storybook</h2>
-	<p class="doubleImages">
-		<img src="pictures/electrode.png" alt="Electrode">
-		<img src="pictures/react-storybook.png" alt="Storybook">
-	</p>
+<section class="slide" id="captain-look">
+	<figure>
+		<img class="cover" src="pictures/Sea-Captain-watch.jpg" alt="captain">
+	</figure>
 	<style>
-		.doubleImages {
-			display: flex;
-			align-items: center;
-			justify-content: space-between;
+		#captain-look img.cover {
+			height: 100%;
 		}
 
-		.doubleImages img {
-			width: 400px;
-		}
-	</style>
-</section>
-
-<section class="slide">
-	<h2>Проблема переиспользуемости компонентов как ее решали мы</h2>
-	<p>Были созданы два вида UI-китов:</p>
-	<ol>
-		<li>dx-components — общий для проектов Frontend-команды open-source</li>
-		<li>dx-ui — под проект DX-Trade и его вайтлейблов inner-source</li>
-		<li>Оба кита версифицированы и подключаются в нужный проект как bower-зависимости</li>
-	</ol>
-</section>
-
-<section class="slide">
-	<h2>Проблема переиспользуемости компонентов как ее решали мы</h2>
-	<p class="doubleImages">
-		<img src="pictures/TLC-events-calendar.png" alt="Electrode">
-		<img src="pictures/TLC-events-list.png" alt="Storybook">
-	</p>
-	<p>Слева и справа используется один и тот-же модифицированный компонент Calendar из пакета dx-components</p>
-	<style>
-		.doubleImages {
-			display: flex;
-			align-items: center;
-			justify-content: space-between;
-		}
-
-		.doubleImages img {
-			width: 400px;
-		}
 	</style>
 </section>
 
@@ -264,48 +220,60 @@
 </section>
 
 <section class="slide">
-	<h2>UI-элементы</h2>
-	<p class="doubleImages">
-		<img src="pictures/safariBrowserElements.jpg" alt="Mac UI">
-		<img src="pictures/chromeBrowserElements.png" alt="Windows UI">
-	</p>
+	<h2>Пункт №1</h2>
+	<ol>
+		<li>
+			<strong>Хочется быстро собирать сложные элементы интерфейса используя рабочие, протестированные
+				компоненты.</strong>
+		</li>
+		<li>
+			...
+		</li>
+	</ol>
+</section>
+
+<section class="slide">
+	<h2>Решение!</h2>
+	<p>UI-кит — библиотека компонентов из которых мы быстро собираем необходимые нам элементы интерфейса
+		набивая их логикой взаимодействия с пользователем.</p>
+</section>
+
+<section class="slide" id="combine">
+	<figure>
+		<img class="preview" src="pictures/origami.gif" alt="Evolution">
+	</figure>
 	<style>
-		.doubleImages {
-			display: flex;
-			align-items: center;
-			justify-content: space-between;
+		#combine img.preview {
+			width: 800px;
 		}
 
-		.doubleImages img {
-			width: 400px;
-		}
 	</style>
 </section>
 
 <section class="slide">
-	<h2>UI-элементы. Должны выглядеть одинаково на любой платформе</h2>
-	<p class="singleImage">
-		<img src="pictures/datepicker.png" alt="Date Picker">
-	</p>
-	<style>
-
-		.singleImage img {
-			width: 700px;
-		}
-	</style>
+	<h2>Бонус:</h2>
+	<ol>
+		<li>
+			UI-элементы выглядят одинаково на всех платформах.
+		</li>
+		<li>
+			UX одинаков и не требует длительного обучения для работы с приложением при переходе с платформы на
+			платформу.
+		</li>
+	</ol>
 </section>
 
 <section class="slide">
-	<h2>UI-элементы. Иногда их просто нет среди стандартных</h2>
-	<p class="singleImage">
-		<img src="pictures/date-time-filter.png" alt="Date Time Filter">
-	</p>
-	<style>
-
-		.singleImage img {
-			width: 700px;
-		}
-	</style>
+	<h2>Как это делаем мы</h2>
+	<ol>
+		<li>
+			dx-components (open-source) — базовая библиотека компонентов.
+		</li>
+		<li>
+			dx-ui, tos-ui, etc... (inner-source) — библиотеки компонентов специфичных для данного проекта (DX-Trade,
+			TOS, etc).
+		</li>
+	</ol>
 </section>
 
 <section class="slide" id="css-history">
@@ -334,31 +302,51 @@
 </section>
 
 <section class="slide">
-	<h2>CSS — начало</h2>
-	<p class="doubleImages">
-		<img src="pictures/mcdonalds.png" alt="mcDonalds">
-		<img src="pictures/yahoo.jpeg" alt="Yahoo">
-	</p>
-	<style>
-		.doubleImages {
-			display: flex;
-			align-items: center;
-			justify-content: space-between;
-		}
-
-		.doubleImages img {
-			width: 400px;
-		}
-	</style>
+	<h2>Пункт №2</h2>
+	<ol>
+		<li>...</li>
+		<li>
+			<strong>Хочется легко модифицировать внешний вид компонента не сильно влезая, а по возможности вообще не влезая в
+				его верстку.</strong>
+		</li>
+		<li>
+			...
+		</li>
+	</ol>
 </section>
 
 <section class="slide">
-	<h2>SASS</h2>
-	<p>
-		SASS превратил CSS в язык программирования, для препроцессингового движка реализующего в таблицах стилей
-		вложенность, переменные, миксины, расширения и логику. Так что стало возможным лучше организовывать CSS-файлы
-		разбивая огромную простыню CSS-кода по более мелким файлам.
-	</p>
+	<h2>CSS — боль на больших проектах</h2>
+	<ol>
+		<li>
+			Глобальное пространство имен
+		</li>
+		<li>
+			Разрешение зависимостей
+		</li>
+		<li>
+			Поиск «мертвого» кода
+		</li>
+		<li>
+			Отсутствие констант
+		</li>
+		<li>
+			Неоднозначный результат (каскад)
+		</li>
+	</ol>
+</section>
+
+<section class="slide" id="fish">
+	<figure>
+		<img class="cover" src="pictures/three-eyed-fish.gif" alt="captain">
+	</figure>
+	<style>
+		#fish img.cover {
+			width: 100%;
+			max-height: 110%;
+		}
+
+	</style>
 </section>
 
 <section class="slide">
@@ -382,7 +370,7 @@
 	<h2>БЭМ — не все так гладко</h2>
 	<ol>
 		<li>
-			Процедура выбора className стала очень кропотливой и отнимает достаточно большое количество времени.
+			Процедура выбора className очень кропотлива и отнимает достаточно большое количество времени.
 		</li>
 		<li>
 			Длинные имена классов раздувают разметку.
@@ -416,226 +404,12 @@
 			Динамическое создание имен классов для каждого локально заданного стиля.
 		</li>
 		<li>
-			CSS-модули являются способом автоматизации BEM-нотации за счёт
-			генерирования уникального className, которое не станет конфликтовать ни с одним другим, даже если будет
-			использоваться одно и то же имя.
+			CSS-модули являются способом автоматизации БЭМ-нотации за счёт
+			генерирования уникального className, которое не станет конфликтовать ни с одним другим.
 		</li>
 	</ol>
 </section>
 
-<section class="slide" id="css-modules">
-	<h2><span class="highlite">CSS-модули</span></h2>
-	<figure>
-		<img class="cover" src="pictures/brick-wall.jpg" alt="Bricks">
-	</figure>
-	<style>
-		#css-modules h2 {
-			margin: 50px 0 0;
-			color: #FFF;
-			text-align: center;
-			font-size: 70px;
-		}
-
-		#css-modules .highlite {
-			background-color: orange;
-			padding: .2rem .5rem;
-			color: black;
-		}
-
-		#css-modules img.cover {
-			max-height: 120%;
-		}
-	</style>
-</section>
-
-<section class="slide" id="single">
-	<h2>Одиночный класс</h2>
-	<img class="preview" src="pictures/w1-example.png" alt="css-w1">
-	<div class="doubleImages">
-		<p>widget.css
-			<img class="singleImage" src="pictures/w1-css.png" alt="css-w1">
-		</p>
-		<p>widget.js
-			<img class="singleImage" src="pictures/w1-js.png" alt="js-w1">
-		</p>
-	</div>
-	<style>
-		.doubleImages {
-			display: flex;
-			justify-content: flex-start;
-			align-items: flex-start;
-		}
-
-		.preview {
-			width: 200px;
-		}
-
-		.singleImage {
-			width: 400px;
-		}
-
-		#single {
-			padding-top: 50px;
-		}
-
-		#single h2 {
-			margin-bottom: 10px;
-		}
-	</style>
-</section>
-
-<section class="slide" id="many">
-	<h2>Несколько классов</h2>
-	<img class="preview" src="pictures/w2-example.png" alt="css-w1">
-	<div class="doubleImages">
-		<p>widget1.css
-			<img class="singleImage" src="pictures/w2-css.png" alt="css-w1">
-		</p>
-		<p>widget1.js
-			<img class="singleImage" src="pictures/w2-js.png" alt="js-w1">
-		</p>
-	</div>
-	<style>
-		.doubleImages {
-			display: flex;
-			justify-content: flex-start;
-			align-items: flex-start;
-		}
-
-		.preview {
-			width: 200px;
-		}
-
-		.singleImage {
-			width: 400px;
-		}
-
-		#many {
-			padding-top: 50px;
-		}
-
-		#many h2 {
-			margin-bottom: 10px;
-		}
-	</style>
-</section>
-
-<section class="slide" id="combined">
-	<h2>Комбинация классов</h2>
-	<img class="preview" src="pictures/w3-example.png" alt="css-w1">
-	<div class="doubleImages">
-		<p>widget2.css
-			<img class="singleImage" src="pictures/w3-css.png" alt="css-w1">
-		</p>
-		<p>widget2.js
-			<img class="singleImage" src="pictures/w3-js.png" alt="js-w1">
-		</p>
-	</div>
-	<style>
-		.doubleImages {
-			display: flex;
-			justify-content: flex-start;
-			align-items: flex-start;
-		}
-
-		.preview {
-			width: 200px;
-		}
-
-		.singleImage {
-			width: 400px;
-		}
-
-		#combined {
-			padding-top: 50px;
-		}
-
-		#combined h2 {
-			margin-bottom: 10px;
-		}
-	</style>
-</section>
-
-<section class="slide" id="nested">
-	<h2>Вложенность классов</h2>
-	<img class="preview" src="pictures/w4-example.png" alt="css-w1">
-	<div class="doubleImages">
-		<p>widget3.css
-			<img class="singleImage" src="pictures/w4-css.png" alt="css-w1">
-		</p>
-		<p>widget3.js
-			<img class="singleImage" src="pictures/w4-js.png" alt="js-w1">
-		</p>
-	</div>
-	<style>
-		.doubleImages {
-			display: flex;
-			justify-content: flex-start;
-			align-items: flex-start;
-		}
-
-		.preview {
-			width: 200px;
-		}
-
-		.singleImage {
-			width: 400px;
-		}
-
-		#nested {
-			padding-top: 50px;
-		}
-
-		#nested h2 {
-			margin-bottom: 10px;
-		}
-	</style>
-</section>
-
-<section class="slide" id="composition">
-	<h2>Композиция</h2>
-	<img class="preview" src="pictures/w5-example.png" alt="css-w1">
-	<div class="doubleImages">
-		<div>
-			<p>util.css
-				<img class="singleImage" src="pictures/w5-util.png" alt="css-w1">
-			</p>
-			<p>widget4.css
-				<img class="singleImage" src="pictures/w5-css.png" alt="css-w1">
-			</p>
-		</div>
-		<p>widget4.js
-			<img class="jsImage" src="pictures/w5-js.png" alt="js-w1">
-		</p>
-	</div>
-	<style>
-		.doubleImages {
-			display: flex;
-			justify-content: flex-start;
-			align-items: flex-start;
-		}
-
-		.preview {
-			width: 200px;
-		}
-
-		#composition .singleImage {
-			width: 300px;
-		}
-
-		#composition .jsImage {
-			width: 500px;
-		}
-
-		#composition {
-			padding-top: 50px;
-		}
-
-		#composition h2 {
-			margin-bottom: 10px;
-		}
-	</style>
-</section>
 
 <section class="slide" id="themr">
 	<h2><span class="highlite">Темизация UI компонетов. react-css-themr</span></h2>
@@ -664,21 +438,26 @@
 </section>
 
 <section class="slide">
-	<p>А что если переиспользуемый компонент будет идти без стилей, а нужные для компонента стили мы будем подключать
-		как зависимость?
+	<p>Все хорошо! CSS-модули сделали css-стили компонентов изолированными, а сам css-код структурированным и
+		привязанным к конкретным компонентам. Но вернемся ко второму пункту ПРОБЛЕМЫ!
 	</p>
-	<p>
-		Подход библиотеки react-css-themr состоит из провайдера и декоратора. Провайдер задает тему через контекст, а
-		декоратор добавляет нашему компоненту логику чтобы понять какая тема будет использоваться в нем или как она
-		будет скомпонована в зависимости от конфигурации контекста и свойств.
-	</p>
+	<ol>
+		<li>...</li>
+		<li>
+			<strong>Хочется легко модифицировать внешний вид компонента не сильно влезая, а по возможности вообще не
+				влезая в
+				его верстку.</strong>
+		</li>
+		<li>
+			...
+		</li>
+	</ol>
 </section>
 
 
 <section class="slide" id="how">
-	<h2>Как этим пользоваться?</h2>
-	<p>Допустим мы создали компонент который хотим темизировать. Для этого мы должны передать декоратору themr
-		уникальный идентификатор:
+	<h2>Решение!</h2>
+	<p>Создаем компонент для которого в последствии через свойства компонента мы будем задавать тему:
 	</p>
 	<p>Button.js</p>
 	<img class="jsImage" src="pictures/themr_button.png"/>
@@ -715,46 +494,42 @@
 	</style>
 </section>
 
-<section class="slide" id="how2">
-	<p>Также можно определить базовый компонент с дефолтной темой:
-	</p>
-	<p>Button.js</p>
-	<img class="jsImage" src="pictures/themr_success_default.png"/>
+
+<section class="slide">
+	<div class="doubleImages">
+		<div class="column">
+			<img src="pictures/btn-6.png">
+		</div>
+		<div class="column">
+			<img src="pictures/btn-5.png" class="next">
+			<img src="pictures/btn-4.png" class="next">
+			<img src="pictures/btn-3.png" class="next">
+			<img src="pictures/btn-2.png" class="next">
+			<img src="pictures/btn-1.png" class="next">
+		</div>
+	</div>
+	<p class="next">Компонент Button один и тот-же! Мы просто меняем тему для него...</p>
 	<style>
-		#how2 .jsImage {
-			width: 500px;
+		.doubleImages {
+			display: flex;
+			align-items: center;
+			justify-content: center;
 		}
 
-		#how2 {
-			padding-top: 50px;
+		.column {
+			display: flex;
+			flex-direction: column;
+			padding: 20px;
 		}
 
-		#how2 h2 {
-			margin-bottom: 10px;
-		}
 	</style>
 </section>
-
 <section class="slide" id="how3">
+	<h2>А также...</h2>
 	<p>
-		В приведенных выше примерах мы темизируем каждый компонент<br/>по отдельности. Но можно определить тему для
-		всего
-		приложения и передать компонентам соответствующие им темы
+		В приведенном выше примере мы темизируем сам компонент.<br/> Но можно определить тему для
+		всего приложения передавая компонентам, при помощи провайдера тем, соответствующие им темы через контекст.
 	</p>
-	<img class="jsImage" src="pictures/themr_provider.png"/>
-	<style>
-		#how3 .jsImage {
-			width: 600px;
-		}
-
-		#how3 {
-			padding-top: 50px;
-		}
-
-		#how3 h2 {
-			margin-bottom: 10px;
-		}
-	</style>
 </section>
 
 <section class="slide" id="custom">
@@ -780,76 +555,6 @@
 		#custom img.cover {
 			height: 100%;
 		}
-	</style>
-</section>
-
-<section class="slide" id="custom_proxy">
-	<h2>Proxy-компонент</h2>
-	<p><img class="preview" src="pictures/custom_proxy1.png" alt="custom proxy component"></p>
-	<p>Пишем компонент более высокого уровня:
-		<img class="preview" src="pictures/custom_proxy2.png" alt="custom proxy component"></p>
-	<p>Далее мы используем Button:
-		<img class="preview" src="pictures/custom_proxy3.png" alt="custom proxy component"></p>
-	<p>Или даже так:
-		<img class="preview" src="pictures/custom_proxy4.png" alt="custom proxy component"></p>
-	<style>
-		#custom_proxy .preview {
-			display: block;
-			width: 600px;
-		}
-
-		#custom_proxy {
-			padding-top: 50px;
-		}
-
-	</style>
-</section>
-
-<section class="slide" id="custom_style">
-	<h2>Style-компонент</h2>
-	<p>Primary кнопка:
-		<img class="preview" src="pictures/custom_style1.png" alt="custom style component"></p>
-	<p>Чтобы не заниматься копипастой можно определить компоненты так:
-		<img class="preview" src="pictures/custom_style2.png" alt="custom style component"></p>
-	<p>Использование этих компонентов вернет одинаковый результат:
-		<img class="preview" src="pictures/custom_style3.png" alt="custom style component"></p>
-	<style>
-		#custom_style .preview {
-			display: block;
-			width: 450px;
-		}
-
-		#custom_style {
-			padding-top: 50px;
-		}
-
-		#custom_style h2 {
-			margin-bottom: 10px;
-		}
-
-	</style>
-</section>
-
-<section class="slide" id="custom_layout">
-	<h2>Layout-компонент</h2>
-	<p>Родительский компонент, который отодражает два компонента горизонтально:
-		<img class="preview" src="pictures/custom_layout1.png" alt="custom layout component"></p>
-	<p>Мы можем сделать так чтобы он никогда не обновлялся, при этом не прорывая жизненные циклы внутренних компонентов:
-		<img class="preview" src="pictures/custom_layout2.png" alt="custom layout component"></p>
-	<style>
-		#custom_layout .preview {
-			display: block;
-			width: 550px;
-		}
-
-		#custom_layout {
-			padding-top: 50px;
-		}
-
-		#custom_layout h2 {
-			margin-bottom: 10px;
-		}
-
 	</style>
 </section>
 
@@ -924,7 +629,7 @@
 </section>
 
 <section class="slide">
-	<h2>Dependency Injection. Контекст в React</h2>
+	<h2>Контекст в React</h2>
 	<p>
 		Разница между контекстом и свойствами в том, что контекст доступен всем потомкам, а свойства — только тому
 		компоненту, которому они переданы.
@@ -952,96 +657,55 @@
 		<li>
 			Статическое свойство childContextTypes, которое описывает свойства, которые будут доступны всем потомкам.
 		</li>
-		<li>
+		<li class="next">
 			Метод getChildContext(), возвращающий конкретное значение контекста.
 		</li>
-		<li>
+		<li class="next">
 			Компонент GrandChild реализует статическое свойство contextTypes, описывающее, какие свойства контекста
 			будет использовать компонент (доступны через this.context).
 		</li>
 	</ol>
-	<p><em>Компоненту Child не нужно передавать контекст вниз в компонент GrandChild. В этом отличие от свойств, которые
+	<p class="next"><em>Компоненту Child не нужно передавать контекст вниз в компонент GrandChild. В этом отличие от свойств, которые
 		нужно передавать по цепочке вручную.</em></p>
 	<style>
 
 		#custom_di_context1 {
-			padding-top: 10px;
+			padding-top: 30px;
 		}
 	</style>
 </section>
 
-<section class="slide">
-	<h2>Dependency Injection (DI)</h2>
-	<p>
-		Смысл DI в том, чтобы иметь зависимости от абстрактных идей, вместо конкретных реализаций. Это позволяет
-		тестировать код и увеличивает возможность повторного использования.
-	</p>
-</section>
-
-<section class="slide" id="custom_di">
-	<p>Рассмотрим компонент RandomNumber отображающий случайное число от 1 до max:
-		<img class="preview" src="pictures/di_di1.png" alt="custom di"></p>
-	<style>
-		#custom_di .preview {
-			display: block;
-			width: 600px;
-		}
-	</style>
-</section>
-
-<section class="slide" id="custom_di1">
-	<p>Давайте посмотрим, как будет выглядеть этот компонент, если мы используем контекст:
-		<img class="preview" src="pictures/di_di2.png" alt="custom di"></p>
-	<p>Теперь мы не зависим от Math.random и Math.round и можем заменить их своими собственными реализациями и передать
-		их через контекст.</p>
-	<style>
-		#custom_di1 .preview {
-			display: block;
-			width: 600px;
-		}
-
-		#custom_di1 {
-			padding-top: 10px;
-		}
-	</style>
-</section>
-
-<section class="slide" id="custom_di2">
-	<p>Мы можем расширить наш пример с генератором случайных чисел до любого сервиса:
-		<img class="preview" src="pictures/di_di3.png" alt="custom di"></p>
-	<style>
-		#custom_di2 .preview {
-			display: block;
-			width: 600px;
-		}
-
-		#custom_di2 {
-			padding-top: 10px;
-		}
-	</style>
-</section>
-
-<section class="slide">
-	<p>С помощью генераторов ES7 мы можем создать отличную абстракцию для DI в React.
-		Давайте рассмотрим два генератора:</p>
+<section class="slide" id="solution">
+	<h2>Проблема!</h2>
 	<ol>
-		<li>@inject — содержит contextTypes компонента.</li>
-		<li>@provide — описывает childContextTypes компонента и связывает контекст с данными.</li>
+		<li class="next">
+			Хочется быстро собирать сложные элементы интерфейса используя рабочие, протестированные компоненты.<br/>
+			<span class="next"><strong>Создаем и используем UI-кит</strong></span>
+		</li>
+		<li class="next">
+			Хочется легко модифицировать внешний вид компонента не сильно влезая, а по возможности вообще не влезая в
+			его верстку.<br/> <span class="next"><strong>СSS-модули и react-css-themr</strong></span>
+		</li>
+		<li class="next">
+			Хочется легко расширять функциональность базовых UI-компонентов.<br/>
+			<span class="next"><strong>Контейнеры, HOC, контекст...</strong></span>
+		</li>
 	</ol>
-	<p>Здесь мы воспользуемся рассмотренным выше паттерном HOC. Функции (декораторе), которая принимает компонент в
-		качестве параметра и возвращает компонент.</p>
+	<style>
+		#solution {
+			padding-top: 30px;
+		}
+	</style>
 </section>
 
-<section class="slide" id="custom_di3">
-	<img class="preview" src="pictures/di_di4.png" alt="custom di">
+<section class="slide" id="captain">
+	<figure>
+		<img class="cover" src="pictures/Sea-Captain.jpg" alt="captain">
+	</figure>
 	<style>
-		#custom_di3 .preview {
-			display: block;
-			width: 700px;
-		}
-
-		#custom_di3 {
-			padding-top: 20px;
+		#captain img.cover {
+			width: 100%;
+			max-height: 130%;
 		}
 	</style>
 </section>
@@ -1090,7 +754,7 @@
 
 		#final {
 			padding-top: 10px;
-		 }
+		}
 	</style>
 </section>
 
