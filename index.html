@@ -182,6 +182,18 @@
 	</ol>
 </section>
 
+<section class="slide" id="captain-look">
+	<figure>
+		<img class="cover" src="pictures/Sea-Captain-watch.jpg" alt="captain">
+	</figure>
+	<style>
+		#captain-look img.cover {
+			height: 100%;
+		}
+
+	</style>
+</section>
+
 <section class="slide" id="ui-kit">
 	<h2><span class="highlite">UI-Kit что это и зачем он нужен</span></h2>
 	<figure>
@@ -324,6 +336,19 @@
 	</ol>
 </section>
 
+<section class="slide" id="fish">
+	<figure>
+		<img class="cover" src="pictures/three-eyed-fish.gif" alt="captain">
+	</figure>
+	<style>
+		#fish img.cover {
+			width: 100%;
+			max-height: 110%;
+		}
+
+	</style>
+</section>
+
 <section class="slide">
 	<h2>БЭМ</h2>
 	<p>
@@ -380,8 +405,7 @@
 		</li>
 		<li>
 			CSS-модули являются способом автоматизации БЭМ-нотации за счёт
-			генерирования уникального className, которое не станет конфликтовать ни с одним другим, даже если будет
-			использоваться одно и то же имя.
+			генерирования уникального className, которое не станет конфликтовать ни с одним другим.
 		</li>
 	</ol>
 </section>
@@ -534,54 +558,6 @@
 	</style>
 </section>
 
-<section class="slide" id="custom_style">
-	<h2>Style-компонент</h2>
-	<p>Primary кнопка:
-		<img class="preview" src="pictures/custom_style1.png" alt="custom style component"></p>
-	<p>Чтобы не заниматься копипастой можно определить компоненты так:
-		<img class="preview" src="pictures/custom_style2.png" alt="custom style component"></p>
-	<p>Использование этих компонентов вернет одинаковый результат:
-		<img class="preview" src="pictures/custom_style3.png" alt="custom style component"></p>
-	<style>
-		#custom_style .preview {
-			display: block;
-			width: 450px;
-		}
-
-		#custom_style {
-			padding-top: 50px;
-		}
-
-		#custom_style h2 {
-			margin-bottom: 10px;
-		}
-
-	</style>
-</section>
-
-<section class="slide" id="custom_layout">
-	<h2>Layout-компонент</h2>
-	<p>Родительский компонент, который отображает два компонента горизонтально:
-		<img class="preview" src="pictures/custom_layout1.png" alt="custom layout component"></p>
-	<p>Мы можем сделать так чтобы он никогда не обновлялся, при этом не прорывая жизненные циклы внутренних компонентов:
-		<img class="preview" src="pictures/custom_layout2.png" alt="custom layout component"></p>
-	<style>
-		#custom_layout .preview {
-			display: block;
-			width: 550px;
-		}
-
-		#custom_layout {
-			padding-top: 50px;
-		}
-
-		#custom_layout h2 {
-			margin-bottom: 10px;
-		}
-
-	</style>
-</section>
-
 <section class="slide" id="custom_container">
 	<h2>Container-компонент</h2>
 	<p>Дано: компонент CommentList
@@ -681,46 +657,57 @@
 		<li>
 			Статическое свойство childContextTypes, которое описывает свойства, которые будут доступны всем потомкам.
 		</li>
-		<li>
+		<li class="next">
 			Метод getChildContext(), возвращающий конкретное значение контекста.
 		</li>
-		<li>
+		<li class="next">
 			Компонент GrandChild реализует статическое свойство contextTypes, описывающее, какие свойства контекста
 			будет использовать компонент (доступны через this.context).
 		</li>
 	</ol>
-	<p><em>Компоненту Child не нужно передавать контекст вниз в компонент GrandChild. В этом отличие от свойств, которые
+	<p class="next"><em>Компоненту Child не нужно передавать контекст вниз в компонент GrandChild. В этом отличие от свойств, которые
 		нужно передавать по цепочке вручную.</em></p>
 	<style>
 
 		#custom_di_context1 {
-			padding-top: 10px;
+			padding-top: 30px;
 		}
 	</style>
 </section>
 
-<section class="slide">
+<section class="slide" id="solution">
 	<h2>Проблема!</h2>
 	<ol>
 		<li class="next">
-			Хочется быстро собирать сложные элементы интерфейса используя рабочие, протестированные компоненты.
-			<span class="next">Создаем и используем UI-кит</span>
+			Хочется быстро собирать сложные элементы интерфейса используя рабочие, протестированные компоненты.<br/>
+			<span class="next"><strong>Создаем и используем UI-кит</strong></span>
 		</li>
 		<li class="next">
 			Хочется легко модифицировать внешний вид компонента не сильно влезая, а по возможности вообще не влезая в
-			его верстку. <span class="next">СSS-модули и react-css-themr</span>
+			его верстку.<br/> <span class="next"><strong>СSS-модули и react-css-themr</strong></span>
 		</li>
 		<li class="next">
-			Хочется легко расширять функциональность базовых UI-компонентов.
-			<span class="next">Контейнеры, HOC, контекст...</span>
-		</li>
-		<li class="next">
-			???
-		</li>
-		<li class="next">
-			Хочется чтобы вот сразу вжух и все работало как надо...
+			Хочется легко расширять функциональность базовых UI-компонентов.<br/>
+			<span class="next"><strong>Контейнеры, HOC, контекст...</strong></span>
 		</li>
 	</ol>
+	<style>
+		#solution {
+			padding-top: 30px;
+		}
+	</style>
+</section>
+
+<section class="slide" id="captain">
+	<figure>
+		<img class="cover" src="pictures/Sea-Captain.jpg" alt="captain">
+	</figure>
+	<style>
+		#captain img.cover {
+			width: 100%;
+			max-height: 130%;
+		}
+	</style>
 </section>
 
 <section class="slide" id="final">
