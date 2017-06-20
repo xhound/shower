@@ -263,9 +263,12 @@
 		Element, Modificator мы снижаем риск специфического отображения.</p>
 	<ul>
 		<li class="next"><strong>Блоки</strong> могут использоваться в нескольких местах сайта;</li>
-		<li class="next"><strong>Элементы</strong> являются частью блока и не имеют функционального смысла вне блока;</li>
-		<li class="next"><strong>Модификаторы</strong> представляют собой свойства блока или элемента, которые меняют его внешний вид или
-			поведение.</li>
+		<li class="next"><strong>Элементы</strong> являются частью блока и не имеют функционального смысла вне блока;
+		</li>
+		<li class="next"><strong>Модификаторы</strong> представляют собой свойства блока или элемента, которые меняют
+			его внешний вид или
+			поведение.
+		</li>
 	</ul>
 	<style>
 		#bem {
@@ -576,30 +579,23 @@
 	<style>
 		#custom_di_context .preview {
 			display: block;
-			width: 500px;
+			width: 200px;
 		}
 	</style>
 </section>
 
 <section class="slide" id="custom_di">
 	<p>При помощи DI мы можем не переопределяя логики работы полностью поменять функционал компонента и создать например
-		Слайдер:
-		<img class="preview" src="pictures/slider.png" alt="custom di"></p>
+		Слайдер:</p>
+	<p><img class="preview" src="pictures/slider.png" alt="custom di"></p>
 	<style>
-		#custom_di_context .preview {
+		#custom_di .preview {
 			display: block;
-			width: 500px;
+			width: 800px;
 		}
 	</style>
 </section>
 
-
-<section class="slide">
-	<h2>HOC + Контекст. Зачем?</h2>
-	<p>Используя эти паттерны вместе мы создаем фабрику компонентов, гененрируя новые компоненты с рвсширенной
-		функциональностью, а также мы имеем возможность напрямую передавать необходимые свойства дочерним
-		компонентам.</p>
-</section>
 <section class="slide" id="ui-kit">
 	<h2><span class="highlite">UI-Kit что это и зачем он нужен</span></h2>
 	<figure>
@@ -759,7 +755,7 @@
 		</li>
 		<li class="next">
 			Хочется легко расширять функциональность базовых UI-компонентов.<br/>
-			<span class="next"><strong>Контейнеры, HOC, контекст...</strong></span>
+			<span class="next"><strong>Контейнеры, HOC, DI...</strong></span>
 		</li>
 		<li class="next">
 			Хочется быстро собирать сложные элементы интерфейса используя рабочие, протестированные компоненты.<br/>
