@@ -53,17 +53,6 @@
 	</style>
 </section>
 
-<section class="slide">
-	<h2>Workflow</h2>
-	<p>
-		<span class="next">Дизайн спецификации, которые мы получаем от дизайн-команды  →</span>
-		<span class="next">Разработка статического прототипа согласно спецификации (FrontEnd-команда) →</span>
-		<span class="next">Окончательная верстка + добавление функциональности (RIA-команда) →</span>
-		<span class="next">Тестирование (QA) → </span>
-		<span class="next">Production...</span>
-	</p>
-</section>
-
 <section class="slide" id="dx-trade">
 	<h2>DX-Trade</h2>
 	<figure>
@@ -164,14 +153,14 @@
 	<h2>Проблема!</h2>
 	<ol>
 		<li class="next">
-			Хочется быстро собирать интерфейс используя рабочие, протестированные компоненты.
-		</li>
-		<li class="next">
 			Хочется легко модифицировать внешний вид компонента не сильно влезая, а по возможности вообще не влезая в
 			его верстку.
 		</li>
 		<li class="next">
 			Хочется легко расширять функциональность базовых UI-компонентов.
+		</li>
+		<li class="next">
+			Хочется быстро собирать интерфейс используя рабочие, протестированные компоненты.
 		</li>
 		<li class="next">
 			???
@@ -192,88 +181,6 @@
 		}
 
 	</style>
-</section>
-
-<section class="slide" id="ui-kit">
-	<h2><span class="highlite">UI-Kit что это и зачем он нужен</span></h2>
-	<figure>
-		<img class="cover" src="pictures/flight-panel.jpeg" alt="Control Panel">
-	</figure>
-	<style>
-		#ui-kit h2 {
-			margin: 150px 0 0;
-			color: #FFF;
-			text-align: center;
-			font-size: 70px;
-		}
-
-		#ui-kit .highlite {
-			background-color: orange;
-			padding: .2rem .5rem;
-			color: black;
-		}
-
-		#ui-kit img.cover {
-			max-height: 110%;
-		}
-	</style>
-</section>
-
-<section class="slide">
-	<h2>Пункт №1</h2>
-	<ol>
-		<li>
-			<strong>Хочется быстро собирать сложные элементы интерфейса используя рабочие, протестированные
-				компоненты.</strong>
-		</li>
-		<li>
-			...
-		</li>
-	</ol>
-</section>
-
-<section class="slide">
-	<h2>Решение!</h2>
-	<p>UI-кит — библиотека компонентов из которых мы быстро собираем необходимые нам элементы интерфейса
-		набивая их логикой взаимодействия с пользователем.</p>
-</section>
-
-<section class="slide" id="combine">
-	<figure>
-		<img class="preview" src="pictures/origami.gif" alt="Evolution">
-	</figure>
-	<style>
-		#combine img.preview {
-			width: 800px;
-		}
-
-	</style>
-</section>
-
-<section class="slide">
-	<h2>Бонус:</h2>
-	<ol>
-		<li>
-			UI-элементы выглядят одинаково на всех платформах.
-		</li>
-		<li>
-			UX одинаков и не требует длительного обучения для работы с приложением при переходе с платформы на
-			платформу.
-		</li>
-	</ol>
-</section>
-
-<section class="slide">
-	<h2>Как это делаем мы</h2>
-	<ol>
-		<li>
-			dx-components (open-source) — базовая библиотека компонентов.
-		</li>
-		<li>
-			dx-ui, tos-ui, etc... (inner-source) — библиотеки компонентов специфичных для данного проекта (DX-Trade,
-			TOS, etc).
-		</li>
-	</ol>
 </section>
 
 <section class="slide" id="css-history">
@@ -302,9 +209,8 @@
 </section>
 
 <section class="slide">
-	<h2>Пункт №2</h2>
+	<h2>Пункт №1</h2>
 	<ol>
-		<li>...</li>
 		<li>
 			<strong>Хочется легко модифицировать внешний вид компонента не сильно влезая, а по возможности вообще не
 				влезая в
@@ -445,10 +351,9 @@
 
 <section class="slide">
 	<p>Все хорошо! CSS-модули сделали css-стили компонентов изолированными, а сам css-код структурированным и
-		привязанным к конкретным компонентам. Но вернемся ко второму пункту ПРОБЛЕМЫ!
+		привязанным к конкретным компонентам. Но вернемся ко первому пункту ПРОБЛЕМЫ!
 	</p>
 	<ol>
-		<li>...</li>
 		<li>
 			<strong>Хочется легко модифицировать внешний вид компонента не сильно влезая, а по возможности вообще не
 				влезая в
@@ -562,6 +467,21 @@
 			height: 100%;
 		}
 	</style>
+</section>
+
+<section class="slide">
+	<h2>Пункт №2</h2>
+	<ol>
+		<li>
+			...
+		</li>
+		<li>
+			<strong>Хочется легко расширять функциональность UI-компонентов.</strong>
+		</li>
+		<li>
+			...
+		</li>
+	</ol>
 </section>
 
 <section class="slide" id="custom_container">
@@ -739,6 +659,103 @@
 	<p>Используя эти паттерны вместе мы создаем фабрику компонентов, гененрируя новые компоненты с рвсширенной
 		функциональностью, а также мы имеем возможность напрямую передавать необходимые свойства дочерним
 		компонентам.</p>
+</section>
+<section class="slide" id="ui-kit">
+	<h2><span class="highlite">UI-Kit что это и зачем он нужен</span></h2>
+	<figure>
+		<img class="cover" src="pictures/flight-panel.jpeg" alt="Control Panel">
+	</figure>
+	<style>
+		#ui-kit h2 {
+			margin: 150px 0 0;
+			color: #FFF;
+			text-align: center;
+			font-size: 70px;
+		}
+
+		#ui-kit .highlite {
+			background-color: orange;
+			padding: .2rem .5rem;
+			color: black;
+		}
+
+		#ui-kit img.cover {
+			max-height: 110%;
+		}
+	</style>
+</section>
+
+<section class="slide" id="ui_kit_design">
+		<img class="preview" src="pictures/ui-kit.jpg" alt="custom di">
+	<style>
+		#ui_kit_design .preview {
+			display: block;
+			width: 800px;
+		}
+	</style>
+</section>
+
+<section class="slide">
+	<h2>Пункт №3</h2>
+	<ol>
+		<li>
+			...
+		</li>
+		<li>
+			...
+		</li>
+		<li>
+			<strong>Хочется быстро собирать сложные элементы интерфейса используя рабочие, протестированные
+				компоненты.</strong>
+		</li>
+		<li>
+			...
+		</li>
+	</ol>
+</section>
+
+<section class="slide">
+	<h2>Решение!</h2>
+	<p>UI-кит — библиотека компонентов из которых мы быстро собираем необходимые нам элементы интерфейса
+		набивая их логикой взаимодействия с пользователем.</p>
+</section>
+
+<section class="slide" id="combine">
+	<figure>
+		<img class="preview" src="pictures/origami.gif" alt="Evolution">
+	</figure>
+	<style>
+		#combine img.preview {
+			width: 800px;
+		}
+
+	</style>
+</section>
+
+<section class="slide">
+	<h2>Бонус:</h2>
+	<ol>
+		<li>
+			UI-элементы выглядят одинаково на всех платформах.
+		</li>
+		<li>
+			UX одинаков и не требует длительного обучения для работы с приложением при переходе с платформы на
+			платформу.
+		</li>
+	</ol>
+</section>
+
+<section class="slide">
+	<h2>Как это делаем мы</h2>
+	<ol>
+		<li>
+			dx-components (open-source) — базовая библиотека компонентов.
+		</li>
+		<li>
+			dx-ui, tos-ui, etc... (inner-source) — библиотеки компонентов специфичных для данного проекта (DX-Trade,
+			TOS, etc).
+		</li>
+	</ol>
 </section>
 
 <section class="slide" id="solution">
