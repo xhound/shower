@@ -256,24 +256,20 @@
 	</style>
 </section>
 
-<section class="slide">
+<section class="slide" id="bem">
 	<h2>БЭМ</h2>
 	<p>
 		При использовании этой методологии мы можем быть уверены что className уникален и что за счет соглашения Block,
 		Element, Modificator мы снижаем риск специфического отображения.</p>
-	<p>
-		<strong>Блоки</strong> могут использоваться в нескольких местах сайта;
-		<strong>Элементы</strong> являются частью блока и не имеют функционального смысла вне блока;
-		<strong>Модификаторы</strong> представляют собой свойства блока или элемента, которые меняют его внешний вид или
-		поведение.
-	</p>
-	<p class="singleImage">
-		<img src="pictures/bem.png" alt="BEM">
-	</p>
+	<ul>
+		<li class="next"><strong>Блоки</strong> могут использоваться в нескольких местах сайта;</li>
+		<li class="next"><strong>Элементы</strong> являются частью блока и не имеют функционального смысла вне блока;</li>
+		<li class="next"><strong>Модификаторы</strong> представляют собой свойства блока или элемента, которые меняют его внешний вид или
+			поведение.</li>
+	</ul>
 	<style>
-
-		.singleImage img {
-			width: 900px;
+		#bem {
+			padding-top: 20px;
 		}
 	</style>
 </section>
@@ -281,16 +277,16 @@
 <section class="slide">
 	<h2>БЭМ — не все так гладко</h2>
 	<ol>
-		<li>
+		<li class="next">
 			Процедура выбора className очень кропотлива и отнимает достаточно большое количество времени.
 		</li>
-		<li>
+		<li class="next">
 			Длинные имена классов раздувают разметку.
 		</li>
-		<li>
+		<li class="next">
 			Необходимо явно расширять каждый компонент интерфейса при каждом повторном использовании.
 		</li>
-		<li>
+		<li class="next">
 			Излишне семантическая разметка.
 		</li>
 	</ol>
@@ -304,7 +300,7 @@
 	<style>
 
 		.singleImage img {
-			width: 700px;
+			width: 800px;
 		}
 	</style>
 </section>
@@ -567,52 +563,36 @@
 </section>
 
 <section class="slide">
-	<h2>Контекст в React</h2>
-	<p>
-		Разница между контекстом и свойствами в том, что контекст доступен всем потомкам, а свойства — только тому
-		компоненту, которому они переданы.
-	</p>
+	<h2>HOC + DI</h2>
+	<p>Смысл DI в том, чтобы иметь зависимости от абстрактных идей, вместо конкретных реализаций. Это позволяет
+		легче тестировать код и многократно увеличивает возможность повторного использования.</p>
 </section>
 
+
 <section class="slide" id="custom_di_context">
-	<p>Рассмотрим компонент Parent:
-		<img class="preview" src="pictures/di_context.png" alt="custom di"></p>
+	<p>Например у нас есть компонент Numeric Stepper:</p>
+	<img class="preview" src="pictures/numericStepper.png" alt="custom di">
+	<p>Он состоит из управляющих элементов: кнопки "+" и "-", а также управляемого элемента поля ввода</p>
 	<style>
 		#custom_di_context .preview {
 			display: block;
 			width: 500px;
 		}
-
-		#custom_di_context {
-			padding-top: 10px;
-		}
 	</style>
 </section>
 
-<section class="slide" id="custom_di_context1">
-	<p>В компоненте Parent мы реализовали следующие вещи:</p>
-	<ol>
-		<li>
-			Статическое свойство childContextTypes, которое описывает свойства, которые будут доступны всем потомкам.
-		</li>
-		<li class="next">
-			Метод getChildContext(), возвращающий конкретное значение контекста.
-		</li>
-		<li class="next">
-			Компонент GrandChild реализует статическое свойство contextTypes, описывающее, какие свойства контекста
-			будет использовать компонент (доступны через this.context).
-		</li>
-	</ol>
-	<p class="next"><em>Компоненту Child не нужно передавать контекст вниз в компонент GrandChild. В этом отличие от
-		свойств, которые
-		нужно передавать по цепочке вручную.</em></p>
+<section class="slide" id="custom_di">
+	<p>При помощи DI мы можем не переопределяя логики работы полностью поменять функционал компонента и создать например
+		Слайдер:
+		<img class="preview" src="pictures/slider.png" alt="custom di"></p>
 	<style>
-
-		#custom_di_context1 {
-			padding-top: 30px;
+		#custom_di_context .preview {
+			display: block;
+			width: 500px;
 		}
 	</style>
 </section>
+
 
 <section class="slide">
 	<h2>HOC + Контекст. Зачем?</h2>
@@ -646,7 +626,7 @@
 </section>
 
 <section class="slide" id="ui_kit_design">
-		<img class="preview" src="pictures/ui-kit.jpg" alt="custom di">
+	<img class="preview" src="pictures/ui-kit.jpg" alt="custom di">
 	<style>
 		#ui_kit_design .preview {
 			display: block;
