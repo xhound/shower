@@ -153,20 +153,19 @@
 	<h2>Проблема!</h2>
 	<ol>
 		<li class="next">
-			Хочется легко модифицировать внешний вид компонента не сильно влезая, а по возможности вообще не влезая в
-			его верстку.
+			Хочется быстро собирать интерфейс используя рабочие, протестированные компоненты.
+		</li>
+		<li class="next">
+			Хочется легко модифицировать внешний вид компонента.
 		</li>
 		<li class="next">
 			Хочется легко расширять функциональность базовых UI-компонентов.
 		</li>
 		<li class="next">
-			Хочется быстро собирать интерфейс используя рабочие, протестированные компоненты.
-		</li>
-		<li class="next">
 			???
 		</li>
 		<li class="next">
-			Хочется чтобы вот сразу вжух и все работало как надо...
+			Хочется чтобы вот сразу вжух и все само...
 		</li>
 	</ol>
 </section>
@@ -181,6 +180,119 @@
 		}
 
 	</style>
+</section>
+
+<section class="slide" id="ui-kit">
+	<h2><span class="highlite">UI-Kit что это и зачем он нужен</span></h2>
+	<figure>
+		<img class="cover" src="pictures/flight-panel.jpeg" alt="Control Panel">
+	</figure>
+	<style>
+		#ui-kit h2 {
+			margin: 150px 0 0;
+			color: #FFF;
+			text-align: center;
+			font-size: 70px;
+		}
+
+		#ui-kit .highlite {
+			background-color: orange;
+			padding: .2rem .5rem;
+			color: black;
+		}
+
+		#ui-kit img.cover {
+			max-height: 110%;
+		}
+	</style>
+</section>
+
+<section class="slide" id="ui_kit_design">
+	<img class="preview" src="pictures/ui-kit.jpg" alt="custom di">
+	<style>
+		#ui_kit_design .preview {
+			display: block;
+			width: 800px;
+		}
+	</style>
+</section>
+
+<section class="slide" id="ui_kit_phinom">
+	<img class="cover" src="pictures/phinom_ui.png" alt="">
+	<style>
+		#ui_kit_phinom .cover {
+			max-height: 120%;
+		}
+	</style>
+</section>
+
+<section class="slide" id="ui_kit_demo">
+	<div class="doubleImages">
+		<div class="column">
+			<img src="pictures/phinom_widget.png">
+		</div>
+		<div class="column">
+			<img src="pictures/iwi_widget.png">
+		</div>
+	</div>
+	<style>
+		.doubleImages {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+		}
+
+		.column {
+			display: flex;
+			flex-direction: column;
+			padding: 20px;
+		}
+
+	</style>
+</section>
+
+<section class="slide">
+	<h2>Пункт №1</h2>
+	<ol>
+		<li>
+			<strong>Хочется быстро собирать сложные элементы интерфейса используя рабочие, протестированные
+				компоненты.</strong>
+		</li>
+		<li>
+			...
+		</li>
+	</ol>
+</section>
+
+<section class="slide">
+	<h2>Решение!</h2>
+	<p>UI-кит — библиотека компонентов из которых мы быстро собираем необходимые нам элементы интерфейса
+		набивая их логикой взаимодействия с пользователем.</p>
+</section>
+
+<section class="slide" id="combine">
+	<figure>
+		<img class="preview" src="pictures/origami.gif" alt="Evolution">
+	</figure>
+	<style>
+		#combine img.preview {
+			width: 800px;
+		}
+
+	</style>
+</section>
+
+<section class="slide">
+	<h2>Бонус:</h2>
+	<ol>
+		<li>
+			UI-элементы выглядят одинаково на всех платформах.
+		</li>
+		<li>
+			UX одинаков и не требует длительного обучения для работы с приложением при переходе с платформы на
+			платформу.
+		</li>
+	</ol>
 </section>
 
 <section class="slide" id="css-history">
@@ -209,12 +321,13 @@
 </section>
 
 <section class="slide">
-	<h2>Пункт №1</h2>
+	<h2>Пункт №2</h2>
 	<ol>
 		<li>
-			<strong>Хочется легко модифицировать внешний вид компонента не сильно влезая, а по возможности вообще не
-				влезая в
-				его верстку.</strong>
+			...
+		</li>
+		<li>
+			<strong>Хочется легко модифицировать внешний вид компонента.</strong>
 		</li>
 		<li>
 			...
@@ -298,7 +411,7 @@
 <section class="slide">
 	<h2>БЭМ — не все так гладко</h2>
 	<p class="singleImage">
-		<img src="pictures/dx-bem.png" alt="DX-BEM">
+		<img src="pictures/bem-fail.png" alt="DX-BEM">
 	</p>
 	<style>
 
@@ -315,8 +428,8 @@
 			Динамическое создание имен классов для каждого локально заданного стиля.
 		</li>
 		<li>
-			CSS-модули являются способом автоматизации БЭМ-нотации за счёт
-			генерирования уникального className, которое не станет конфликтовать ни с одним другим.
+			При помощи CSS-модули можно автоматизировать БЭМ-нотацию за счёт
+			генерирования уникального className, который не станет конфликтовать ни с одним другим.
 		</li>
 	</ol>
 </section>
@@ -371,13 +484,14 @@
 
 <section class="slide">
 	<p>Все хорошо! CSS-модули сделали css-стили компонентов изолированными, а сам css-код структурированным и
-		привязанным к конкретным компонентам. Но вернемся ко первому пункту ПРОБЛЕМЫ!
+		привязанным к конкретным компонентам. Но есть одна проблема стили стали слишком изолированными!
 	</p>
 	<ol>
 		<li>
-			<strong>Хочется легко модифицировать внешний вид компонента не сильно влезая, а по возможности вообще не
-				влезая в
-				его верстку.</strong>
+			...
+		</li>
+		<li>
+			<strong>Хочется легко модифицировать внешний вид компонента.</strong>
 		</li>
 		<li>
 			...
@@ -459,7 +573,7 @@
 	<h2>react-css-themr</h2>
 	<p>В приведенном выше примере мы используем css-модули, но возникает проблема склейки имен классов и вручную
 		заниматься этим не очень удобно.<br/> Библиотека react-css-themr облегчает работу с темизируемыми
-		компонентами. Например можно определить тему не только для компонента, но и для всего приложения передавая
+		компонентами.Можно определить тему не только для компонента, но и для всего приложения передавая
 		компонентам, при помощи провайдера тем, соответствующие им темы через контекст.
 	</p>
 </section>
@@ -491,8 +605,11 @@
 </section>
 
 <section class="slide">
-	<h2>Пункт №2</h2>
+	<h2>Пункт №3</h2>
 	<ol>
+		<li>
+			...
+		</li>
 		<li>
 			...
 		</li>
@@ -506,11 +623,11 @@
 </section>
 
 <section class="slide" id="custom_container">
-	<h2>Container-компонент</h2>
-	<p>Дано: компонент CommentList
-		<img class="preview" src="pictures/custom_container1.png" alt="custom container component"></p>
-	<p>Разделим получение данных и рендеринг обернув его в контейнер:
-		<img class="preview" src="pictures/custom_container2.png" alt="custom container component"></p>
+	<h2>Layout-компонент</h2>
+	<p>Создадим компонент который отображает контент в две колонки:
+		<img class="preview" src="pictures/custom_layout2.png" alt="custom container component"></p>
+	<p>Теперь достаточно передать в виде пропсов два компонента и готово!
+		<img class="preview" src="pictures/custom_layout1.png" alt="custom container component"></p>
 	<style>
 		#custom_container .preview {
 			display: block;
@@ -527,18 +644,32 @@
 
 	</style>
 </section>
+<section class="slide" id="custom_layout">
+	<h2>Layout-компонент</h2>
+	<p>Получаем два виджета в две колонки:
+		<img class="preview" src="pictures/custom_layout3.png" alt="custom container component"></p>
+	<style>
+		#custom_layout .preview {
+			display: block;
+			width: 500px;
+		}
+
+		#custom_layout h2 {
+			margin-bottom: 10px;
+		}
+
+	</style>
+</section>
 
 <section class="slide">
-	<h2>Container-компонент. Зачем?</h2>
-	<p>Используя этот паттерн мы добавляем новые свойства базовым компонентам. А также можем создавать новые компоненты
-		с более сложным функционалом. Например получением данных от сервера.</p>
+	<h2>Layout-компонент. Зачем?</h2>
+	<p>Используя этот паттерн мы можем создавать компоненты отвечающие только за расположение контента.</p>
 </section>
 
 <section class="slide" id="custom_hoc">
 	<h2>Higher Order Component</h2>
-	<p>Начнем с простого компонента Greeting
-		<img class="preview" src="pictures/custom_hoc1.png" alt="custom hoc component"></p>
-	<p>Если он получит props.name, он отрендерит данные. В противном случае он отрендерит “Connecting…”.</p>
+	<p>Давайте сделаем компонент Stepper:
+		<img class="preview" src="pictures/stepper_demo.png" alt="custom hoc component"></p>
 	<style>
 		#custom_hoc .preview {
 			display: block;
@@ -549,34 +680,82 @@
 </section>
 
 <section class="slide" id="custom_hoc1">
-	<h2>Higher Order Component</h2>
-	<p>Теперь немного более высокий порядок:
-		<img class="preview" src="pictures/custom_hoc2.png" alt="custom hoc component"></p>
+	<p>Его код выглядит примерно так:
+		<img class="preview" src="pictures/stepper_src_zoomed.png" alt="custom hoc component"></p>
 	<style>
 		#custom_hoc1 .preview {
 			display: block;
-			width: 550px;
+			width: 800px;
 		}
-
-		#custom_hoc1 {
-			padding-top: 50px;
-		}
-
 
 	</style>
 </section>
 
 <section class="slide" id="custom_hoc2">
-	<h2>Higher Order Component</h2>
-	<p>Далее мы оборачиваем компонент в эту функцию:
-		<img class="preview" src="pictures/custom_hoc3.png" alt="custom hoc component"></p>
-	<p>WOW! Теперь наш компонент Greeting умеет получать данные...</p>
-	<p>Это очень мощный шаблон, чтобы компонент мог получать данные и раздавать их любому количеству простых
-		компонентов.</p>
+	<p>И теперь если не передавать управляющих и управляемый компоненты:
+		<img class="preview" src="pictures/stepper_usage1.png" alt="custom hoc component"></p>
+	<p>Мы получаем:
+		<img class="preview1" src="pictures/stepper_demo.png" alt="custom hoc component"></p>
+
 	<style>
 		#custom_hoc2 .preview {
 			display: block;
+			width: 700px;
+		}
+		#custom_hoc2 .preview1 {
+			display: block;
+			width: 400px;
+		}
+	</style>
+</section>
+
+<section class="slide" id="custom_hoc3">
+	<p>Вместо дефолтного управляемого компонента можно передать любой компонент отвечающий API степпера:
+		<img class="preview" src="pictures/stepper_usage2.png" alt="custom hoc component"></p>
+	<p>И получим:
+		<img class="preview1" src="pictures/stepper_weird.png" alt="custom hoc component"></p>
+
+	<style>
+		#custom_hoc3 .preview {
+			display: block;
+			width: 800px;
+		}
+		#custom_hoc3 .preview1 {
+			display: block;
+			width: 200px;
+		}
+	</style>
+</section>
+
+<section class="slide" id="custom_hoc4">
+	<p>На базе Степпера мы можем создать например Слайдер:
+		<img class="preview" src="pictures/slider_src_zoomed.png" alt="custom hoc component"></p>
+
+	<style>
+		#custom_hoc4 .preview {
+			display: block;
 			width: 500px;
+		}
+	</style>
+</section>
+
+<section class="slide" id="custom_hoc5">
+	<p>И теперь просто вызвав Slider и передав ему массив картинок:
+		<img class="preview" src="pictures/slider_usage.png" alt="custom hoc component"></p>
+	<p>Получаем простенький слайдер:
+		<img class="preview1" src="pictures/slider_demo.png" alt="custom hoc component"></p>
+
+	<style>
+		#custom_hoc5 .preview {
+			display: block;
+			width: 500px;
+		}
+		#custom_hoc5 .preview1 {
+			display: block;
+			width: 700px;
+		}
+		#custom_hoc5 {
+			padding-top: 10px;
 		}
 	</style>
 </section>
@@ -585,135 +764,6 @@
 	<h2>HOC. Зачем?</h2>
 	<p>Используя этот паттерн мы можем создать фабрику компонентов, гененрируя новые компоненты с расширенной
 		функциональностью. А также можем отделить логику компонента от способов ее реализации.</p>
-</section>
-
-<section class="slide">
-	<h2>HOC + DI</h2>
-	<p>Смысл DI в том, чтобы иметь зависимости от абстрактных идей, вместо конкретных реализаций. Это позволяет
-		легче тестировать код и многократно увеличивает возможность повторного использования.</p>
-</section>
-
-
-<section class="slide" id="custom_di_context">
-	<p>Например у нас есть компонент Numeric Stepper:</p>
-	<img class="preview" src="pictures/numericStepper.png" alt="custom di">
-	<p>Он состоит из управляющих элементов: кнопки "+" и "-", а также управляемого элемента поля ввода</p>
-	<style>
-		#custom_di_context .preview {
-			display: block;
-			width: 200px;
-		}
-	</style>
-</section>
-
-<section class="slide" id="custom_di">
-	<p>При помощи DI мы можем не переопределяя логики работы полностью поменять функционал компонента и создать например
-		Слайдер:</p>
-	<p><img class="preview" src="pictures/slider.png" alt="custom di"></p>
-	<style>
-		#custom_di .preview {
-			display: block;
-			width: 800px;
-		}
-	</style>
-</section>
-
-<section class="slide" id="ui-kit">
-	<h2><span class="highlite">UI-Kit что это и зачем он нужен</span></h2>
-	<figure>
-		<img class="cover" src="pictures/flight-panel.jpeg" alt="Control Panel">
-	</figure>
-	<style>
-		#ui-kit h2 {
-			margin: 150px 0 0;
-			color: #FFF;
-			text-align: center;
-			font-size: 70px;
-		}
-
-		#ui-kit .highlite {
-			background-color: orange;
-			padding: .2rem .5rem;
-			color: black;
-		}
-
-		#ui-kit img.cover {
-			max-height: 110%;
-		}
-	</style>
-</section>
-
-<section class="slide" id="ui_kit_design">
-	<img class="preview" src="pictures/ui-kit.jpg" alt="custom di">
-	<style>
-		#ui_kit_design .preview {
-			display: block;
-			width: 800px;
-		}
-	</style>
-</section>
-
-<section class="slide">
-	<h2>Пункт №3</h2>
-	<ol>
-		<li>
-			...
-		</li>
-		<li>
-			...
-		</li>
-		<li>
-			<strong>Хочется быстро собирать сложные элементы интерфейса используя рабочие, протестированные
-				компоненты.</strong>
-		</li>
-		<li>
-			...
-		</li>
-	</ol>
-</section>
-
-<section class="slide">
-	<h2>Решение!</h2>
-	<p>UI-кит — библиотека компонентов из которых мы быстро собираем необходимые нам элементы интерфейса
-		набивая их логикой взаимодействия с пользователем.</p>
-</section>
-
-<section class="slide" id="combine">
-	<figure>
-		<img class="preview" src="pictures/origami.gif" alt="Evolution">
-	</figure>
-	<style>
-		#combine img.preview {
-			width: 800px;
-		}
-
-	</style>
-</section>
-
-<section class="slide">
-	<h2>Бонус:</h2>
-	<ol>
-		<li>
-			UI-элементы выглядят одинаково на всех платформах.
-		</li>
-		<li>
-			UX одинаков и не требует длительного обучения для работы с приложением при переходе с платформы на
-			платформу.
-		</li>
-	</ol>
-</section>
-
-<section class="slide">
-	<h2>Как это делаем мы</h2>
-	<ol>
-		<li>
-			dx-components (open-source) — базовая библиотека компонентов.
-		</li>
-		<li>
-			dx-ui, tos-ui, etc... (inner-source) — библиотеки компонентов специфичных для данного проекта (DX-Trade,
-			TOS, etc).
-		</li>
-	</ol>
 </section>
 
 <section class="slide" id="tos-1">
