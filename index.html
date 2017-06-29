@@ -854,6 +854,39 @@
 	</style>
 </section>
 
+<section class="slide" id="di-4">
+	<h2>Но! Context не самое лучшее решение</h2>
+	<p>Разработчики Facebook не рекомендуют использовать Context.</p>
+	<figure>
+		<img class="preview" src="pictures/context-fail.png" alt="">
+	</figure>
+	<style>
+		#di-4 {
+			padding-top: 70px;
+		}
+		#di-4 .preview {
+			width: 400px;
+		}
+	</style>
+</section>
+
+<section class="slide" id="di-3">
+	<figure>
+		<img class="cover" src="pictures/inversify.jpg" alt="">
+	</figure>
+	<style>
+		#di-3 img.cover {
+			width: 100%;
+			height: 120%;
+		}
+	</style>
+</section>
+
+<section class="slide" id="di-5">
+	<h2>Inversify JS</h2>
+	<p>Позволяет внедрять зависимости не используя Context.</p>
+</section>
+
 <section class="slide" id="solution">
 	<h2>Задача</h2>
 	<ol>
@@ -868,6 +901,10 @@
 		<li class="next">
 			Хочется легко расширять функциональность базовых UI-компонентов.<br/>
 			<span class="next"><strong>HOC...</strong></span>
+		</li>
+		<li class="next">
+			Хочется чтобы вот сразу вжух и все само...
+			<span class="next"><strong>Внедрение дефолтных компонентов как зависимостей</strong></span>
 		</li>
 	</ol>
 	<style>
