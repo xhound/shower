@@ -54,49 +54,34 @@
 </section>
 
 <section class="slide" id="dx-trade">
-	<h2>DX-Trade</h2>
 	<figure>
-		<img class="preview" src="pictures/dx-trade.png" alt="Dx-Trade">
+		<img class="cover" src="pictures/dx-trade.png" alt="Dx-Trade">
 	</figure>
 	<style>
-		#dx-trade img.preview {
-			width: 800px;
-		}
-
-		#dx-trade {
-			padding-top: 30px;
+		#dx-trade img.cover {
+			height: 120%;
 		}
 	</style>
 </section>
 
 <section class="slide" id="gedik">
-	<h2>Gedik</h2>
 	<figure>
-		<img class="preview" src="pictures/Gedik.png" alt="Gedik">
+		<img class="cover" src="pictures/Gedik.png" alt="Gedik">
 	</figure>
 	<style>
-		#gedik img.preview {
-			width: 750px;
-		}
-
-		#gedik {
-			padding-top: 30px;
+		#gedik img.cover {
+			height: 120%;
 		}
 	</style>
 </section>
 
 <section class="slide" id="phinom">
-	<h2>Phinom</h2>
 	<figure>
-		<img class="preview" src="pictures/Phinom.png" alt="Phinom">
+		<img class="cover" src="pictures/Phinom.png" alt="Phinom">
 	</figure>
 	<style>
-		#phinom img.preview {
-			width: 800px;
-		}
-
-		#phinom {
-			padding-top: 30px;
+		#phinom img.cover {
+			height: 120%;
 		}
 	</style>
 </section>
@@ -150,7 +135,7 @@
 </section>
 
 <section class="slide">
-	<h2>Проблема!</h2>
+	<h2>Задача!</h2>
 	<ol>
 		<li class="next">
 			Хочется быстро собирать интерфейс используя рабочие, протестированные компоненты.
@@ -207,12 +192,20 @@
 	</style>
 </section>
 
-<section class="slide" id="ui_kit_design">
-	<img class="preview" src="pictures/ui-kit.jpg" alt="custom di">
+<section class="slide" id="ui_kit_bootstrap">
+	<img class="cover" src="pictures/bootstrap.png" alt="">
 	<style>
-		#ui_kit_design .preview {
-			display: block;
-			width: 800px;
+		#ui_kit_bootstrap .cover {
+			height: 120%;
+		}
+	</style>
+</section>
+
+<section class="slide" id="ui_kit_material">
+	<img class="cover" src="pictures/material-ui.png" alt="">
+	<style>
+		#ui_kit_material .cover {
+			height: 120%;
 		}
 	</style>
 </section>
@@ -251,17 +244,28 @@
 	</style>
 </section>
 
-<section class="slide">
-	<h2>Пункт №1</h2>
+<section class="slide" id="problem1">
+	<h2>Решаем задачу</h2>
 	<ol>
-		<li>
-			<strong>Хочется быстро собирать сложные элементы интерфейса используя рабочие, протестированные
-				компоненты.</strong>
+		<li class="black">
+			<strong>Хочется быстро собирать интерфейс используя рабочие, протестированные компоненты.</strong>
 		</li>
-		<li>
-			...
+		<li class="grey">
+			Хочется легко модифицировать внешний вид компонента.
+		</li>
+		<li class="grey">
+			Хочется легко расширять функциональность базовых UI-компонентов.
 		</li>
 	</ol>
+	<style>
+		#problem1 .grey {
+			color: grey;
+		}
+		#problem1 .black {
+			color: black;
+		}
+
+	</style>
 </section>
 
 <section class="slide">
@@ -286,7 +290,7 @@
 	<h2>Бонус:</h2>
 	<ol>
 		<li>
-			UI-элементы выглядят одинаково на всех платформах.
+			UI-элементы выглядят так как надо на всех платформах.
 		</li>
 		<li>
 			UX одинаков и не требует длительного обучения для работы с приложением при переходе с платформы на
@@ -320,19 +324,53 @@
 	</style>
 </section>
 
-<section class="slide">
-	<h2>Пункт №2</h2>
+<section class="slide" id="ui_kit_demo1">
+	<div class="doubleImages">
+		<div class="column">
+			<img src="pictures/difference_dropdown1.png">
+		</div>
+		<div class="column">
+			<img src="pictures/difference_dropdown2.png">
+		</div>
+	</div>
+	<style>
+		.doubleImages {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+		}
+
+		.column {
+			display: flex;
+			flex-direction: column;
+			padding: 20px;
+		}
+
+	</style>
+</section>
+
+<section class="slide" id="problem2">
+	<h2>Решаем задачу</h2>
 	<ol>
-		<li>
-			...
+		<li class="grey">
+			Хочется быстро собирать интерфейс используя рабочие, протестированные компоненты.
 		</li>
-		<li>
+		<li class="black">
 			<strong>Хочется легко модифицировать внешний вид компонента.</strong>
 		</li>
-		<li>
-			...
+		<li class="grey">
+			Хочется легко расширять функциональность базовых UI-компонентов.
 		</li>
 	</ol>
+	<style>
+		#problem2 .grey {
+			color: grey;
+		}
+		#problem2 .black {
+			color: black;
+		}
+
+	</style>
 </section>
 
 <section class="slide">
@@ -371,9 +409,6 @@
 
 <section class="slide" id="bem">
 	<h2>БЭМ</h2>
-	<p>
-		При использовании этой методологии мы можем быть уверены что className уникален и что за счет соглашения Block,
-		Element, Modificator мы снижаем риск специфического отображения.</p>
 	<ul>
 		<li class="next"><strong>Блоки</strong> могут использоваться в нескольких местах сайта;</li>
 		<li class="next"><strong>Элементы</strong> являются частью блока и не имеют функционального смысла вне блока;
@@ -383,11 +418,6 @@
 			поведение.
 		</li>
 	</ul>
-	<style>
-		#bem {
-			padding-top: 20px;
-		}
-	</style>
 </section>
 
 <section class="slide">
@@ -435,16 +465,13 @@
 </section>
 
 <section class="slide">
-	<h2>CSS-модули</h2>
+	<h2>CSS-модули + Webpack</h2>
 	<ol>
 		<li>
 			<strike class="next">Глобальное пространство имен</strike>
 		</li>
 		<li>
 			<strike class="next">Разрешение зависимостей</strike>
-		</li>
-		<li>
-			<strike class="next">Поиск «мертвого» кода</strike>
 		</li>
 		<li>
 			<strike class="next">Неоднозначный результат (каскад)</strike>
@@ -480,8 +507,8 @@
 </section>
 
 <section class="slide">
-	<p>Все хорошо! CSS-модули сделали css-стили компонентов изолированными, а сам css-код структурированным и
-		привязанным к конкретным компонентам. Но есть одна проблема стили стали слишком изолированными!
+	<h2>CSS-модули. Большое НО!</h2>
+	<p>Стили стали слишком изолированными!
 	</p>
 	<ol>
 		<li>
@@ -499,39 +526,40 @@
 
 <section class="slide" id="how">
 	<h2>Решение!</h2>
-	<p>Создаем компонент для которого в последствии через свойства компонента мы будем задавать тему:
-	</p>
+	<p>Создаем компонент для которого в последствии через пропсы будем задавать тему:</p>
+</section>
+
+<section class="slide" id="how0">
 	<p>Button.js</p>
 	<img class="jsImage" src="pictures/themr_button.png"/>
+	<img class="button" src="pictures/button2.png"/>
 	<style>
-		#how .jsImage {
+		#how0 .jsImage {
 			width: 500px;
-		}
-
-		#how {
-			padding-top: 50px;
-		}
-
-		#how h2 {
-			margin-bottom: 10px;
 		}
 	</style>
 </section>
 
 <section class="slide" id="how1">
-	<p>Компонент определяет API для темизации который состоит из трех имен классов button, icon и content. И теперь мы
-		можем использовать компонент button например с темой success в которой мы определили стили для button, icon и
-		content в файле successButton.css:
+	<p>
+		Компонент определяет API для темизации который состоит из трех имен классов button, icon и content:
 	</p>
 	<p>SuccessButton.js</p>
 	<img class="jsImage" src="pictures/themr_success.png"/>
+	<img class="button" src="pictures/success_btn.png"/>
 	<style>
 		#how1 .jsImage {
 			width: 500px;
 		}
 
+		#how1 .button {
+			margin-left: 50px;
+			width: 126px;
+			height: 126px;
+		}
+
 		#how1 h2 {
-			margin-bottom: 10px;
+			margin-bottom: 40px;
 		}
 	</style>
 </section>
@@ -540,14 +568,13 @@
 <section class="slide">
 	<div class="doubleImages">
 		<div class="column">
-			<img src="pictures/btn-6.png">
+			<img src="pictures/button2.png">
 		</div>
 		<div class="column">
-			<img src="pictures/btn-5.png" class="next">
-			<img src="pictures/btn-4.png" class="next">
-			<img src="pictures/btn-3.png" class="next">
-			<img src="pictures/btn-2.png" class="next">
-			<img src="pictures/btn-1.png" class="next">
+			<img src="pictures/button3.png" class="next">
+			<img src="pictures/button4.png" class="next">
+			<img src="pictures/button5.png" class="next">
+			<img src="pictures/button1.png" class="next round">
 		</div>
 	</div>
 	<p class="next">Компонент Button один и тот-же! Мы просто меняем тему для него...</p>
@@ -557,10 +584,15 @@
 			align-items: center;
 			justify-content: center;
 		}
+		.round {
+			width: 126px;
+			height: 126px;
+		}
 
 		.column {
 			display: flex;
 			flex-direction: column;
+			align-items: center;
 			padding: 20px;
 		}
 
@@ -568,8 +600,7 @@
 </section>
 <section class="slide" id="how3">
 	<h2>react-css-themr</h2>
-	<p>В приведенном выше примере мы используем css-модули, но возникает проблема склейки имен классов и вручную
-		заниматься этим не очень удобно.<br/> Библиотека react-css-themr облегчает работу с темизируемыми
+	<p>Библиотека react-css-themr облегчает работу с темизируемыми
 		компонентами.Можно определить тему не только для компонента, но и для всего приложения передавая
 		компонентам, при помощи провайдера тем, соответствующие им темы через контекст.
 	</p>
@@ -601,66 +632,28 @@
 	</style>
 </section>
 
-<section class="slide">
-	<h2>Пункт №3</h2>
+<section class="slide" id="problem3">
+	<h2>Решаем задачу</h2>
 	<ol>
-		<li>
-			...
+		<li class="grey">
+			Хочется быстро собирать интерфейс используя рабочие, протестированные компоненты.
 		</li>
-		<li>
-			...
+		<li class="grey">
+			<strike>Хочется легко модифицировать внешний вид компонента.</strike>
 		</li>
-		<li>
-			<strong>Хочется легко расширять функциональность UI-компонентов.</strong>
-		</li>
-		<li>
-			...
+		<li class="black">
+			<strong>Хочется легко расширять функциональность базовых UI-компонентов.</strong>
 		</li>
 	</ol>
-</section>
-
-<section class="slide" id="custom_container">
-	<h2>Layout-компонент</h2>
-	<p>Создадим компонент который отображает контент в две колонки:
-		<img class="preview" src="pictures/custom_layout2.png" alt="custom container component"></p>
-	<p>Теперь достаточно передать в виде пропсов два компонента и готово!
-		<img class="preview" src="pictures/custom_layout1.png" alt="custom container component"></p>
 	<style>
-		#custom_container .preview {
-			display: block;
-			width: 500px;
+		#problem3 .grey {
+			color: grey;
 		}
-
-		#custom_container {
-			padding-top: 20px;
-		}
-
-		#custom_container h2 {
-			margin-bottom: 10px;
+		#problem3 .black {
+			color: black;
 		}
 
 	</style>
-</section>
-<section class="slide" id="custom_layout">
-	<h2>Layout-компонент</h2>
-	<p>Получаем два виджета в две колонки:
-		<img class="preview" src="pictures/custom_layout3.png" alt="custom container component"></p>
-	<style>
-		#custom_layout .preview {
-			display: block;
-			width: 500px;
-		}
-
-		#custom_layout h2 {
-			margin-bottom: 10px;
-		}
-
-	</style>
-</section>
-
-<section class="slide">
-	<h2>Layout-компонент. Зачем?</h2>
-	<p>Используя этот паттерн мы можем создавать компоненты отвечающие только за расположение контента.</p>
 </section>
 
 <section class="slide" id="custom_hoc">
@@ -699,6 +692,7 @@
 			display: block;
 			width: 700px;
 		}
+
 		#custom_hoc2 .preview1 {
 			display: block;
 			width: 400px;
@@ -717,6 +711,7 @@
 			display: block;
 			width: 800px;
 		}
+
 		#custom_hoc3 .preview1 {
 			display: block;
 			width: 200px;
@@ -739,20 +734,29 @@
 <section class="slide" id="custom_hoc5">
 	<p>И теперь просто вызвав Slider и передав ему массив картинок:
 		<img class="preview" src="pictures/slider_usage.png" alt="custom hoc component"></p>
-	<p>Получаем простенький слайдер:
-		<img class="preview1" src="pictures/slider_demo.png" alt="custom hoc component"></p>
-
 	<style>
 		#custom_hoc5 .preview {
 			display: block;
 			width: 500px;
 		}
-		#custom_hoc5 .preview1 {
+
+		#custom_hoc5 {
+			padding-top: 170px;
+		}
+	</style>
+</section>
+
+<section class="slide" id="custom_hoc6">
+	<p>Получаем простенький слайдер:
+		<img class="preview1" src="pictures/slider_demo.png" alt="custom hoc component"></p>
+
+	<style>
+		#custom_hoc6 .preview {
 			display: block;
 			width: 700px;
 		}
-		#custom_hoc5 {
-			padding-top: 10px;
+		#custom_hoc6 {
+			padding-top: 60px;
 		}
 	</style>
 </section>
@@ -795,12 +799,14 @@
 	</style>
 </section>
 
-<section class="slide">
+<section class="slide" id="reusable">
 	<h2>Переиспользуемые компоненты</h2>
-	<p>Для решения задачи создания компонента реализующего календарный способ отображения событий и одновременно
-		являющегося виджетом в отображении событий в виде ленты был использован немного модифицированный компонент
-		Calendar из библиотеки dx-components.</p>
-	<p>Один компонент — два способа использования. Круто!</p>
+	<p>Один компонент — множество способов использования. Круто!</p>
+	<style>
+		#reusable {
+			padding-top: 180px;
+		}
+	</style>
 </section>
 
 <section class="slide" id="captain">
@@ -816,7 +822,7 @@
 </section>
 
 <section class="slide" id="solution">
-	<h2>Проблема!</h2>
+	<h2>Задача</h2>
 	<ol>
 		<li class="next">
 			Хочется быстро собирать сложные элементы интерфейса используя рабочие, протестированные компоненты.<br/>
@@ -828,7 +834,7 @@
 		</li>
 		<li class="next">
 			Хочется легко расширять функциональность базовых UI-компонентов.<br/>
-			<span class="next"><strong>Layout-компоненты, HOC...</strong></span>
+			<span class="next"><strong>HOC...</strong></span>
 		</li>
 	</ol>
 	<style>
