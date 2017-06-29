@@ -192,6 +192,16 @@
 	</style>
 </section>
 
+<section class="slide" id="ui_kit_design">
+	<img class="preview" src="pictures/ui-kit.jpg" alt="custom di">
+	<style>
+		#ui_kit_design .preview {
+			display: block;
+			width: 800px;
+		}
+	</style>
+</section>
+
 <section class="slide" id="ui_kit_bootstrap">
 	<img class="cover" src="pictures/bootstrap.png" alt="">
 	<style>
@@ -261,6 +271,7 @@
 		#problem1 .grey {
 			color: grey;
 		}
+
 		#problem1 .black {
 			color: black;
 		}
@@ -299,31 +310,6 @@
 	</ol>
 </section>
 
-<section class="slide" id="css-history">
-	<h2><span class="highlite">От CSS к CSS-модулям</span></h2>
-	<figure>
-		<img class="cover" src="pictures/Legos.jpg" alt="Legos">
-	</figure>
-	<style>
-		#css-history h2 {
-			margin: 150px 0 0;
-			color: #FFF;
-			text-align: center;
-			font-size: 70px;
-		}
-
-		#css-history .highlite {
-			background-color: orange;
-			padding: .2rem .5rem;
-			color: black;
-		}
-
-		#css-history img.cover {
-			max-height: 110%;
-		}
-	</style>
-</section>
-
 <section class="slide" id="ui_kit_demo1">
 	<div class="doubleImages">
 		<div class="column">
@@ -349,6 +335,31 @@
 	</style>
 </section>
 
+<section class="slide" id="css-history">
+	<h2><span class="highlite">От CSS к CSS-модулям</span></h2>
+	<figure>
+		<img class="cover" src="pictures/Legos.jpg" alt="Legos">
+	</figure>
+	<style>
+		#css-history h2 {
+			margin: 150px 0 0;
+			color: #FFF;
+			text-align: center;
+			font-size: 70px;
+		}
+
+		#css-history .highlite {
+			background-color: orange;
+			padding: .2rem .5rem;
+			color: black;
+		}
+
+		#css-history img.cover {
+			max-height: 110%;
+		}
+	</style>
+</section>
+
 <section class="slide" id="problem2">
 	<h2>Решаем задачу</h2>
 	<ol>
@@ -366,6 +377,7 @@
 		#problem2 .grey {
 			color: grey;
 		}
+
 		#problem2 .black {
 			color: black;
 		}
@@ -431,9 +443,6 @@
 		</li>
 		<li class="next">
 			Необходимо явно расширять каждый компонент интерфейса при каждом повторном использовании.
-		</li>
-		<li class="next">
-			Излишне семантическая разметка.
 		</li>
 	</ol>
 </section>
@@ -508,19 +517,10 @@
 
 <section class="slide">
 	<h2>CSS-модули. Большое НО!</h2>
-	<p>Стили стали слишком изолированными!
-	</p>
-	<ol>
-		<li>
-			...
-		</li>
-		<li>
-			<strong>Хочется легко модифицировать внешний вид компонента.</strong>
-		</li>
-		<li>
-			...
-		</li>
-	</ol>
+	<p>Стили стали слишком изолированными!<br/> Но ведь нам
+		<strong>Хочется легко модифицировать внешний вид компонента.</strong></p>
+	<h2 class="next">Что делать?</h2>
+
 </section>
 
 
@@ -584,6 +584,7 @@
 			align-items: center;
 			justify-content: center;
 		}
+
 		.round {
 			width: 126px;
 			height: 126px;
@@ -649,6 +650,7 @@
 		#problem3 .grey {
 			color: grey;
 		}
+
 		#problem3 .black {
 			color: black;
 		}
@@ -755,6 +757,7 @@
 			display: block;
 			width: 700px;
 		}
+
 		#custom_hoc6 {
 			padding-top: 60px;
 		}
@@ -812,6 +815,36 @@
 <section class="slide" id="captain">
 	<figure>
 		<img class="cover" src="pictures/Sea-Captain.jpg" alt="captain">
+	</figure>
+	<style>
+		#captain img.cover {
+			width: 100%;
+			max-height: 130%;
+		}
+	</style>
+</section>
+
+<section class="slide" id="di">
+	<h2>Что дальше?</h2>
+	<p>У нас есть библиотека гибких переиспользуемых, темизируемых компонентов! Но чтобы пользоваться ими на проекте
+		необходимо писать обертки вокруг каждого из них. Нужен дефолтный набор компонентов попадающих в приложение.</p>
+</section>
+
+<section class="slide" id="di-1">
+	<figure>
+		<img class="cover" src="pictures/props.png" alt="">
+	</figure>
+	<style>
+		#captain img.cover {
+			width: 100%;
+			max-height: 130%;
+		}
+	</style>
+</section>
+
+<section class="slide" id="di-2">
+	<figure>
+		<img class="cover" src="pictures/context.png" alt="">
 	</figure>
 	<style>
 		#captain img.cover {
