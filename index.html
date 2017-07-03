@@ -103,7 +103,7 @@
 </section>
 
 <section class="slide" id="dont">
-	<h2>И совсем не хочется так:</h2>
+	<h2>И, совсем, не хочется так:</h2>
 	<figure>
 		<img class="preview" src="pictures/fail.jpg" alt="Fail">
 	</figure>
@@ -138,7 +138,7 @@
 	<h2>Задача!</h2>
 	<ol>
 		<li class="next">
-			Хочется быстро собирать интерфейс используя рабочие, протестированные компоненты.
+			Хочется быстро собирать интерфейс, используя рабочие, протестированные, компоненты.
 		</li>
 		<li class="next">
 			Хочется легко модифицировать внешний вид компонента.
@@ -168,16 +168,17 @@
 </section>
 
 <section class="slide" id="ui-kit">
-	<h2><span class="highlite">UI-Kit что это и зачем он нужен</span></h2>
+	<h2><span class="highlite">Что такое UI-Kit <br/> и зачем он нужен?</span></h2>
 	<figure>
 		<img class="cover" src="pictures/flight-panel.jpeg" alt="Control Panel">
 	</figure>
 	<style>
 		#ui-kit h2 {
-			margin: 150px 0 0;
+			margin: 100px 0 0;
 			color: #FFF;
 			text-align: center;
 			font-size: 70px;
+			line-height: normal;
 		}
 
 		#ui-kit .highlite {
@@ -233,7 +234,7 @@
 	<h2>Решаем задачу</h2>
 	<ol>
 		<li class="black">
-			<strong>Хочется быстро собирать интерфейс используя рабочие, протестированные компоненты.</strong>
+			<strong>Хочется быстро собирать интерфейс, используя рабочие, протестированные, компоненты.</strong>
 		</li>
 		<li class="grey">
 			Хочется легко модифицировать внешний вид компонента.
@@ -256,7 +257,7 @@
 
 <section class="slide">
 	<h2>Решение!</h2>
-	<p>UI-кит — библиотека компонентов из которых мы быстро собираем необходимые нам элементы интерфейса
+	<p>UI-кит — библиотека компонентов, из которых мы быстро собираем, необходимые нам, элементы интерфейса,
 		набивая их логикой взаимодействия с пользователем.</p>
 </section>
 
@@ -279,10 +280,55 @@
 			UI-элементы выглядят так как надо на всех платформах.
 		</li>
 		<li>
-			UX одинаков и не требует длительного обучения для работы с приложением при переходе с платформы на
+			UX одинаков, и не требует длительного обучения для работы с приложением, при переходе с платформы на
 			платформу.
 		</li>
 	</ol>
+</section>
+
+<section class="slide" id="whiteLabel">
+	<h2>White Label</h2>
+	<blockquote>
+		<p>
+			<strong>White Label</strong> (русск. «Белый» лейбл) — это концепция, предусматривающая производство
+			продуктов или услуг одной компанией и использование таких продуктов или услуг другой компанией под своим
+			брендом.
+		</p>
+	</blockquote>
+</section>
+
+<section class="slide" id="wl_example">
+	<div class="doubleImages">
+		<div class="column">
+			<img class="preview" src="pictures/duster.jpg">
+		</div>
+		<div class="next column">
+			<img class="preview" src="pictures/nissan.png">
+		</div>
+	</div>
+	<p class="next">Один автомобиль продается под разными марками...</p>
+	<style>
+		#wl_example {
+			padding-top: 170px;
+		}
+
+		#wl_example .preview {
+			width: 500px;
+		}
+
+		.doubleImages {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+		}
+
+		#wl_example .column {
+			display: flex;
+			flex-direction: column;
+			padding: 0;
+		}
+
+	</style>
 </section>
 
 <section class="slide" id="ui_kit_demo">
@@ -307,6 +353,31 @@
 			padding: 20px;
 		}
 
+	</style>
+</section>
+
+<section class="slide" id="ui_kit_demo_vars">
+	<div>
+		<div class="column">
+			<p>widget.looks.styl</p>
+			<pre>
+				<code>&-info {</code>
+				<code>     background-color: <mark>$modal-window-header-bg-color;</mark></code>
+				<code>     .messagePanel--content {</code>
+				<code>          color: $additional-text-color;</code>
+				<code>     }</code>
+				<code>}</code>
+			</pre>
+			<p>default.styl</p>
+			<pre>
+				<code><mark>$modal-window-header-bg-color</mark> =  #cbe0e0;</code>
+			</pre>
+		</div>
+	</div>
+	<style>
+		#ui_kit_demo_vars {
+			padding-top: 20px;
+		}
 	</style>
 </section>
 
@@ -388,19 +459,19 @@
 <section class="slide">
 	<h2>CSS — боль на больших проектах</h2>
 	<ol>
-		<li>
+		<li class="next">
 			Глобальное пространство имен
 		</li>
-		<li>
+		<li class="next">
 			Разрешение зависимостей
 		</li>
-		<li>
+		<li class="next">
 			Поиск «мертвого» кода
 		</li>
-		<li>
+		<li class="next">
 			Отсутствие констант
 		</li>
-		<li>
+		<li class="next">
 			Неоднозначный результат (каскад)
 		</li>
 	</ol>
@@ -530,24 +601,79 @@
 </section>
 
 <section class="slide" id="how0">
-	<p>Button.js</p>
-	<img class="jsImage" src="pictures/themr_button.png"/>
-	<img class="button" src="pictures/button2.png"/>
+	<div class="doubleImages">
+		<div class="column">
+			<p>Button.js</p>
+			<pre>
+				<code>@themr('MyThemedButton')</code>
+				<code>class Button extends Component {</code>
+				<code>static propTypes = {</code>
+				<code>...</code>
+				<code>     theme: {</code>
+				<code>        <mark>button: React.PropTypes.string,</mark></code>
+				<code>        <mark>icon: React.PropTypes.string,</mark></code>
+				<code>        <mark>content: React.PropTypes.string</mark></code>
+				<code>     }</code>
+				<code>}</code>
+				<code>render() {</code>
+				<code>     const { theme, icon, children } = this.props;</code>
+				<code>     return (</code>
+				<code>         &lt;button className={<mark>theme.button</mark>}&gt;</code>
+				<code>              { icon && &lt;i className={<mark>theme.icon</mark>}&gt;{icon}&lt;/i&gt; }</code>
+				<code>              &lt;span className={<mark>theme.content</mark>}&gt;{children}&lt;/span&gt;</code>
+				<code>         &lt;/button&gt;</code>
+				<code>      )</code>
+				<code>}</code>
+			</pre>
+		</div>
+		<div class="column">
+			<img class="button next" src="pictures/button2.png"/>
+		</div>
+	</div>
 	<style>
-		#how0 .jsImage {
-			width: 500px;
+		#how0 {
+			padding-top: 5px;
+		}
+
+		#how0 pre {
+			font-size: 14px;
+		}
+
+		.doubleImages {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+		}
+
+		.column {
+			display: flex;
+			flex-direction: column;
+			padding: 20px;
 		}
 	</style>
 </section>
 
 <section class="slide" id="how1">
-	<p>
-		Компонент определяет API для темизации который состоит из трех имен классов button, icon и content:
-	</p>
-	<p>SuccessButton.js</p>
-	<img class="jsImage" src="pictures/themr_success.png"/>
-	<img class="button" src="pictures/success_btn.png"/>
+	<div class="doubleImages">
+		<div class="column">
+			<p>SuccessButton.js</p>
+			<pre>
+				<code>import Button from './Button';</code>
+				<code>import <mark>successTheme from './SuccessButton.css';</mark></code>
+				<code>export const SuccessButton = (props) => (</code>
+				<code>     &lt;Button {...props} theme={<mark>successTheme</mark>}&gt;Yeah!&lt;/Button&gt;</code>
+				<code>);</code>
+			</pre>
+		</div>
+		<div class="column">
+			<img class="button next" src="pictures/success_btn.png"/>
+		</div>
+	</div>
 	<style>
+		#how1 pre {
+			font-size: 20px;
+		}
+
 		#how1 .jsImage {
 			width: 500px;
 		}
@@ -672,27 +798,38 @@
 </section>
 
 <section class="slide" id="custom_hoc1">
-	<p>Его код выглядит примерно так:
-		<img class="preview" src="pictures/stepper_src_zoomed.png" alt="custom hoc component"></p>
+	<p>Его код выглядит примерно так:</p>
+	<pre>
+		<code>render() {</code>
+		<code>     const {<mark>ShowValue, Increase, Decrease</mark>, theme} = this.props;</code>
+		<code>     return (</code>
+		<code>	     &lt;div className={theme.container}></code>
+		<code>		     &lt;<mark>ShowValue</mark> theme={theme.showValue} value={this.state.value} onChange={this.onChange}/></code>
+		<code>		     &lt;<mark>Decrease</mark> theme={theme.decrease} onClick={this.onDecreaseClick}>-&lt;/Decrease></code>
+		<code>		     &lt;<mark>Increase</mark> theme={theme.increase} onClick={this.onIncreaseClick}>+&lt;/Increase></code>
+		<code>	     &lt;/div></code>
+		<code>     );</code>
+		<code>}</code>
+	</pre>
 	<style>
-		#custom_hoc1 .preview {
-			display: block;
-			width: 800px;
+		#custom_hoc1 pre {
+			font-size: 15px;
 		}
-
 	</style>
 </section>
 
 <section class="slide" id="custom_hoc2">
 	<p>И теперь если не передавать управляющих и управляемого компонентов:
-		<img class="preview" src="pictures/stepper_usage1.png" alt="custom hoc component"></p>
+		<code>
+			&lt;Stepper theme={stepperTheme} minValue={0} maxValue={10}/>
+		</code>
+	</p>
 	<p>Мы получаем:
 		<img class="preview1" src="pictures/stepper_demo.png" alt="custom hoc component"></p>
 
 	<style>
-		#custom_hoc2 .preview {
-			display: block;
-			width: 700px;
+		#custom_hoc2 code {
+			font-size: 20px;
 		}
 
 		#custom_hoc2 .preview1 {
@@ -703,15 +840,18 @@
 </section>
 
 <section class="slide" id="custom_hoc3">
-	<p>Вместо дефолтного управляемого компонента можно передать любой компонент отвечающий API степпера:
-		<img class="preview" src="pictures/stepper_usage2.png" alt="custom hoc component"></p>
+	<p>Вместо дефолтного управляемого компонента можно передать любой компонент отвечающий API степпера:<br/>
+		<code>
+			&lt;Stepper
+			<mark>ShowValue={SomeShowView}</mark>
+			theme={stepperTheme} minValue={0} maxValue={10}/>
+		</code>
 	<p>И получим:
 		<img class="preview1" src="pictures/stepper_weird.png" alt="custom hoc component"></p>
 
 	<style>
-		#custom_hoc3 .preview {
-			display: block;
-			width: 800px;
+		#custom_hoc3 code {
+			font-size: 20px;
 		}
 
 		#custom_hoc3 .preview1 {
@@ -723,19 +863,33 @@
 
 <section class="slide" id="custom_hoc4">
 	<p>На базе Степпера мы можем создать например Слайдер:
-		<img class="preview" src="pictures/slider_src_zoomed.png" alt="custom hoc component"></p>
+	<pre>
+	<code>const Slider = (props) => {</code>
+	<code>     return (</code>
+	<code>	     &lt;<mark>Stepper theme</mark>={sliderTheme}</code>
+	<code>		     	<mark>minValue</mark>={0}</code>
+	<code>			    <mark>maxValue</mark>={props.images.length - 1}</code>
+	<code>			    <mark>ShowValue</mark>>={Images(props.images)}</code>
+	<code>			    <mark>Increase</mark>={ControlIncrease}</code>
+	<code>			    <mark>Decrease</mark>={ControlDecrease}/></code>
+	<code>     )</code>
+	<code>};</code>
+	</pre>
+	</p>
 
 	<style>
-		#custom_hoc4 .preview {
-			display: block;
-			width: 500px;
+		#custom_hoc4 code {
+			font-size: 18px;
 		}
 	</style>
 </section>
 
 <section class="slide" id="custom_hoc5">
-	<p>И теперь просто вызвав Slider и передав ему массив картинок:
-		<img class="preview" src="pictures/slider_usage.png" alt="custom hoc component"></p>
+	<p>И теперь просто вызвав Slider и передав ему массив картинок:<br/>
+		<code>
+			&lt;Slider images={imagesArray}/>
+		</code>
+	</p>
 	<style>
 		#custom_hoc5 .preview {
 			display: block;
@@ -762,12 +916,6 @@
 			padding-top: 60px;
 		}
 	</style>
-</section>
-
-<section class="slide">
-	<h2>HOC. Зачем?</h2>
-	<p>Используя этот паттерн мы можем создать фабрику компонентов, гененрируя новые компоненты с расширенной
-		функциональностью. А также можем отделить логику компонента от способов ее реализации.</p>
 </section>
 
 <section class="slide" id="tos-1">
@@ -812,6 +960,12 @@
 	</style>
 </section>
 
+<section class="slide">
+	<h2>HOC. Зачем?</h2>
+	<p>Используя этот паттерн мы можем создать фабрику компонентов, гененрируя новые компоненты с расширенной
+		функциональностью. А также можем отделить логику компонента от способов ее реализации.</p>
+</section>
+
 <section class="slide" id="captain">
 	<figure>
 		<img class="cover" src="pictures/Sea-Captain.jpg" alt="captain">
@@ -826,48 +980,48 @@
 
 <section class="slide" id="di">
 	<h2>Что дальше?</h2>
-	<p>У нас есть библиотека гибких переиспользуемых, темизируемых компонентов! Но чтобы пользоваться ими на проекте
-		необходимо писать обертки вокруг каждого из них. Нужен дефолтный набор компонентов попадающих в приложение.</p>
+	<p>У нас есть библиотека гибких переиспользуемых, темизируемых компонентов!
+		Нужен дефолтный набор компонентов попадающих в приложение.</p>
+</section>
+
+<section class="slide" id="di0">
+	<h2>Хочется:</h2>
+	<p>Определить глобальный объект дефолтных компонентов
+	<pre>
+	<code>{</code>
+	<code>      'Button': defaultButton,</code>
+	<code>      'Input': defaultInput,</code>
+	<code>           ...</code>
+	<code>      'Checkbox': defaultCheckbox</code>
+	<code>}</code>
+	</pre>
+	</p>
+	<p>...и использовать их в приложении</p>
+	<style>
+		#di0 {
+			padding-top: 40px;
+		}
+		#di0 pre {
+			font-size: 20px;
+		}
+	</style>
 </section>
 
 <section class="slide" id="di-1">
 	<figure>
 		<img class="cover" src="pictures/props.png" alt="">
 	</figure>
-	<style>
-		#captain img.cover {
-			width: 100%;
-			max-height: 130%;
-		}
-	</style>
 </section>
 
 <section class="slide" id="di-2">
 	<figure>
 		<img class="cover" src="pictures/context.png" alt="">
 	</figure>
-	<style>
-		#captain img.cover {
-			width: 100%;
-			max-height: 130%;
-		}
-	</style>
 </section>
 
 <section class="slide" id="di-4">
 	<h2>Но! Context не самое лучшее решение</h2>
 	<p>Разработчики Facebook не рекомендуют использовать Context.</p>
-	<figure>
-		<img class="preview" src="pictures/context-fail.png" alt="">
-	</figure>
-	<style>
-		#di-4 {
-			padding-top: 70px;
-		}
-		#di-4 .preview {
-			width: 400px;
-		}
-	</style>
 </section>
 
 <section class="slide" id="di-3">
@@ -891,7 +1045,7 @@
 	<h2>Задача</h2>
 	<ol>
 		<li class="next">
-			Хочется быстро собирать сложные элементы интерфейса используя рабочие, протестированные компоненты.<br/>
+			Хочется быстро собирать сложные элементы интерфейса, используя рабочие, протестированные, компоненты.<br/>
 			<span class="next"><strong>Создаем и используем UI-кит</strong></span>
 		</li>
 		<li class="next">
@@ -904,7 +1058,7 @@
 		</li>
 		<li class="next">
 			Хочется чтобы вот сразу вжух и все само...
-			<span class="next"><strong>Внедрение дефолтных компонентов как зависимостей</strong></span>
+			<span class="next"><strong>Внедрение дефолтных компонентов, как зависимостей</strong></span>
 		</li>
 	</ol>
 	<style>
